@@ -1,5 +1,11 @@
 master 
+<<<<<<< HEAD
 mayank 
+=======
+kapil
+
+mayank
+>>>>>>> 9b3d734e56a03c3ca9c73c553efe959a26b004fc
 master
 sitole
 hello world!
