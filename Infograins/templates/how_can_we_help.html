@@ -1,0 +1,102 @@
+
+{% extends 'base.html' %}
+{% block title %}Infograins | Help{% endblock title %}
+{% block help %}
+
+    <!-- inner page banner start here -->
+    <!-- <section class="banner_section">
+        <div class="banner_img">
+            <img src="/static/assets/images/inner_banner.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="container">
+            <div class="banner_txt">
+                <h2 class="mb-0">How can we help</h2>
+            </div>
+        </div>
+    </section> -->
+    <section>
+        <div class="page_banner howCanWeHelp_bg">
+            <h2 class="page_heading text-center">How can we help</h2>
+        </div>
+    </section>
+    <!-- inner page banner close here -->
+
+    <!-- How help section start here -->
+    <section class="how_help_section">
+        <div class="container">
+            <div class="help_faq_box">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#help1" aria-expanded="true" aria-controls="help1">
+                                <i class="far fa-question-circle font_icon"></i> Project Planning
+                            </button>
+                        </h2>
+                        <div id="help1" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>We understand the influence of planning of project before beginning anything. Having
+                                    an expert team of business analysts that can communication with the clients and
+                                    customers and simplify the details of the requirements, we essentially create a
+                                    documentation of the plan. After the analysis part has been completed, the entire
+                                    plan will then be predated and discussed with the development team to fine ditty it
+                                    and set the modules and working strategy.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#help2" aria-expanded="false" aria-controls="help2">
+                                <i class="far fa-question-circle font_icon"></i> Client Need
+                            </button>
+                        </h2>
+                        <div id="help2" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Our designers will also design a questionnaire for you so that every single inquiry
+                                    is been resolved before selecting up the starters of the project.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#help3" aria-expanded="false" aria-controls="help3">
+                                <i class="far fa-question-circle font_icon"></i> Client Approval
+                            </button>
+                        </h2>
+                        <div id="help3" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Once the design gets approved, we showcase evolution over the milestone of the
+                                    project on the demo server.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#help4" aria-expanded="false" aria-controls="help4">
+                                <i class="far fa-question-circle font_icon"></i> Quality Assurance
+                            </button>
+                        </h2>
+                        <div id="help4" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Our quality assurance team will check the apps even before sending it out to the
+                                    clients for demo purpose. We will gather the reaction when you are done with testing
+                                    and make mandatory updates in the application. Once all the modules have been
+                                    designed and developed, the project is perfectly ready for delivery and you can
+                                    demand post delivery support anytime.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- How help section close here -->
+{% endblock help %}
+    

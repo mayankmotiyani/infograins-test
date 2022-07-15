@@ -1,0 +1,1235 @@
+{% extends 'base.html' %}
+{% block title %}Blockchain Development Company in India | Metaverse | NFT Marketplace - Infograins{% endblock title %}
+{% block metadescription %}
+<meta name="description" content="We are a leading blockchain development company, an enterprise blockchain technology solution and services supplier. It's totally customized to meet the needs of your organization.">
+<meta name="keywords" content="Blockchain development, blockchain app development, blockchain consulting services, blockchain technology company, custom blockchain development, enterprise blockchain technology development company, enterprise blockchain technology, enterprise blockchain development company, enterprise blockchain company, blockchain as services, blockchain app">
+{% endblock metadescription %}
+{% block companyactivation %}active{%endblock companyactivation %}
+{% block company_scripts %}
+
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"ItemList",
+  "itemListElement":[
+    {
+      "@type":"SiteNavigationElement",
+      "position":1,
+      "name": "Home",
+      "description": "Homes Desc.",
+      "url":"https://infograins.com/"
+    },
+    {
+      "@type":"SiteNavigationElement",
+      "position":2,
+      "name": "About",
+      "description": "About",
+      "url":"https://infograins.com/about-us"
+    },
+    {
+      "@type":"SiteNavigationElement",
+      "position":3,
+      "name": "Blockchain",
+      "description": "Blockchain",
+      "url":"https://infograins.com/blockchain-services/blockchain-development-company-india"
+    },
+    {
+      "@type":"SiteNavigationElement",
+      "position":4,
+      "name": "NFT",
+      "description": "NFT",
+      "url":"https://infograins.com/nft/nft-marketplace-development-company/"
+    },
+    {
+      "@type":"SiteNavigationElement",
+      "position":5,
+      "name": "Franchise",
+      "description": "Franchise",
+      "url":"https://infograins.com/franchise/"
+    },
+    {
+      "@type":"SiteNavigationElement",
+      "position":6,
+      "name": "Blockchain",
+      "description": "Blockchain",
+      "url":"https://infograins.com/blockchain-services/smart-contracts"
+    },
+    {
+      "@type":"SiteNavigationElement",
+      "position":7,
+      "name": "Services",
+      "description": "Services",
+      "url":"https://infograins.com/services/"
+    },
+    {
+      "@type":"SiteNavigationElement",
+      "position":8,
+      "name": "Blog",
+      "description": "blog",
+      "url":"https://infograins.com/blog/"
+    },
+     {
+      "@type":"SiteNavigationElement",
+      "position":9,
+      "name": "Contact",
+      "description": "Contact",
+      "url":"https://infograins.com/contact/"
+    }
+  ]
+}
+</script>
+<script type='application/ld+json'> 
+        {
+          "@context": "http://www.schema.org",
+          "@type": "Organization",
+          "name": "Infograins Software Solutions",
+          "url": "https://infograins.com/",
+          "logo": "https://infograins.com/static/assets/images/logo.png",
+          "image": "https://infograins.com/static/assets/images/logo.png",
+          "description": "We are one of the leading blockchain app development companies in India. We have been successfully implemented blockchain for several industries like supply chain, healthcare, Diamond, Food processing, Music Industry manufacturing, banning Insurance etc.",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service"
+          },
+          "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount":"982"
+            }
+        }
+         </script>
+{% endblock company_scripts %}
+{% block index %}
+
+<style>
+    :root {
+        --text-color: #fff;
+    }
+    .heroSectionMain{
+        background-image:linear-gradient(45deg, rgba(0,0,0,0.5),rgba(0,0,0,0.2)), url('/static/images/blockchain_background.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+    }
+    .heroHeading_contain{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .heroSliderContainer{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .heroHeading_Div{
+        padding-top:35px;
+        text-align: center;
+    }
+
+    .heroHeading_Div h1{
+        color: #fff;
+    }
+    
+    .heroHeading_Div p{
+        color: #fff;
+    }
+    @media screen and (max-width:525px){
+        .heroSectionMain{
+            height: auto;
+            padding: 40px 10px;
+        }
+
+        .heroHeading_contain{
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+    .typewriter {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 56px;
+        color: #fff;
+        font-weight: bold;
+        position: relative;
+        margin: 0;
+        top: 50%;
+        line-height: 1;
+        transform: translateY(-50%);
+    }
+
+    .typewriter span {
+        color: var(--text-color);
+        text-transform: uppercase;
+        padding: 10px;
+        border-right: solid var(--text-color) 10px;
+        animation: cursor 1s ease-in-out infinite;
+    }
+
+    .contactUs_hero{
+        color: #fff;
+        background-color: #ef6e10;
+        padding: 10px 40px;
+        border-radius: 4px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .contactUs_hero:hover{
+        color: #fff;
+    }
+
+    .heroDescription{
+        margin-bottom: 50px;
+    }
+
+    @keyframes cursor {
+        from {
+            border-color: var(--text-color);
+        }
+
+        to {
+            border-color: transparent;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .typewriter {
+            font-size: 24px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .typewriter {
+            font-size: 36px;
+        }
+    }
+</style>
+
+    
+    <!-- banner section start here -->
+    <div class="banner-wrap">
+        <section class="heroSectionMain">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-12">
+                        <div class="heroHeading_contain">
+                            <div class="heroHeading_Div">
+                                <p class="typewriter">
+                                    <span data-text="Blockchain, Metaverse, IoT, Mobility Development Service Provider"></span>
+                                </p>
+                                <p class="heroDescription">We provide cutting-edge solutions, our clients will benefit from our deep industry expertise and experience. We've assisted a lot of clients all over the world in effectively launching and realising their blockchain-based enterprises.</p>
+                                <a href="{% url 'contact' %}" class="contactUs_hero"> Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-6 col-12">
+                        <div class="heroSliderContainer">
+                            <div class="heroSlider">                        
+                                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                      <div class="carousel-item active" data-bs-interval="10000">
+                                        <img src="https://infograins.com/static/assets/images/banner3.jpg" class="d-block w-100" alt="...">
+                                      </div>
+                                      <div class="carousel-item" data-bs-interval="2000">
+                                        <img src="https://infograins.com/static/assets/images/banner1.jpg" class="d-block w-100" alt="...">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img src="https://infograins.com/static/assets/images/banner1.jpg" class="d-block w-100" alt="...">
+                                      </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Next</span>
+                                    </button>
+                                  </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/static/assets/images/banner1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item active">
+                    <img src="/static/assets/images/banner1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/assets/images/banner2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/assets/images/banner3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>  -->
+        <!-- <div class="shape">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
+                <path fill="#ffffff" fill-opacity="1">
+                    <animate attributeName="d" dur="20000ms" repeatCount="indefinite"
+                        values="M0,160L48,181.3C96,203,192,245,288,261.3C384,277,480,267,576,234.7C672,203,768,149,864,117.3C960,85,1056,75,1152,90.7C1248,107,1344,149,1392,170.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z; M0,160L48,181.3C96,203,192,245,288,234.7C384,224,480,160,576,133.3C672,107,768,117,864,138.7C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;												 M0,64L48,74.7C96,85,192,107,288,133.3C384,160,480,192,576,170.7C672,149,768,75,864,80C960,85,1056,171,1152,181.3C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+                                                 M0,160L48,181.3C96,203,192,245,288,261.3C384,277,480,267,576,234.7C672,203,768,149,864,117.3C960,85,1056,75,1152,90.7C1248,107,1344,149,1392,170.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;" />
+
+                </path>
+
+            </svg>
+        </div> -->
+    </div>
+    <!-- banner section close here -->
+
+    <!-- company profile section start here -->
+    <section class="compy_section" id="company_service">
+        <div class="container">
+            <div class="row">
+                <div class="column col-lg-4 col-md-6 col-sm-12 col-12">
+                    <div class="page_cmp_heading cmpny_busns">
+                        <p>Boost Your Business Profile</p>
+                        <h2><span>Infograins</span> Software Solutions</h2>
+                    </div>
+                    <div class="cmpny_busns cmp_business_box">
+                            <!-- <a href="https://infograins.com/blockchain-services/defi" style="display: block; position:absolute; top:0%; left:0%; width:100%; height:100%; z-index:99;"></a> -->
+                            <div class="inner_box">
+                            <div class="icon_outer">
+                                <span class="icon_bg"></span>
+                                <div class="icon_box">
+                                    <img src="/static/assets/images/service_icon/defi.png" class="img-fluid" alt="" title="">
+                                </div>
+                            </div>
+                            <h3 class="cmp_Serv_name">  <a href="https://infograins.com/blockchain-services/defi">Decentralized Finance (DEFI)</a>  </h3>
+                            <div class="text">
+                                DeFi, or decentralized finance, is a new way to execute financial transactions through
+                                applications.
+                            </div>
+                            <div class="more_link">
+                                <a href="javascript:;">
+                                    <span class="fa fa-arrow-right"></span>
+                                </a>
+                            </div>
+                            </div>
+                        
+                         </div>
+                    <div class="cmpny_busns cmp_business_box">
+                        <div class="inner_box">
+                            <div class="icon_outer">
+                                <span class="icon_bg"></span>
+                                <div class="icon_box">
+                                    <img src="/static/assets/images/service_icon/Ar_vr.png" class="img-fluid" alt="" title="">
+                                </div>
+                            </div>
+                            <h3 class="cmp_Serv_name"> <a href="https://infograins.com/services/"> AR & VR </a> </h3>
+                            <div class="text">
+                                (VR) enables you to fully immerse yourself in a computer-simulated reality.(AR) on the
+                                other hand adds a virtual layer to the real world.
+                            </div>
+                            <div class="more_link">
+                                <a href="javascript:;">
+                                    <span class="fa fa-arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cmpny_busns cmp_business_box">
+                        <div class="inner_box">
+                            <div class="icon_outer">
+                                <span class="icon_bg"></span>
+                                <div class="icon_box">
+                                    <img src="/static/assets/images/service_icon/WebDeveopment.png" class="img-fluid" alt=""
+                                        title="">
+                                </div>
+                            </div>
+                            <h3 class="cmp_Serv_name"> <a href="https://infograins.com/services/responsive-web-design"> Website development services </a> </h3>
+                            <div class="text">
+                                Web development is the work involved in developing a Web site for the Internet (​World
+                                Wide Web).
+                            </div>
+                            <div class="more_link">
+                                <a href="javascript:;">
+                                    <span class="fa fa-arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-lg-4 col-md-6 col-sm-12 col-12">
+                    <div class="cmpny_busns cmp_business_box">
+                        <div class="inner_box">
+                            <div class="icon_outer">
+                                <span class="icon_bg"></span>
+                                <div class="icon_box">
+                                    <img src="/static/assets/images/service_icon/PublicBlockchain.png" class="img-fluid" alt=""
+                                        title="">
+                                </div>
+                            </div>
+                            <h3 class="cmp_Serv_name"> <a href="https://infograins.com/blockchain-services/public-blockchain"> Public Blockchain </a> </h3>
+                            <div class="text">
+                                A public blockchain is decentralized and does not have a single entity which controls
+                                the network.
+                            </div>
+                            <div class="more_link">
+                                <a href="javascript:;">
+                                    <span class="fa fa-arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cmpny_busns cmp_business_box">
+                        <div class="inner_box">
+                            <div class="icon_outer">
+                                <span class="icon_bg"></span>
+                                <div class="icon_box">
+                                    <img src="/static/assets/images/service_icon/nft.png" class="img-fluid" alt="" title="">
+                                </div>
+                            </div>
+                            <h3 class="cmp_Serv_name"> <a href="https://infograins.com/blockchain-services/non-fungible-tokens"> Non Fungible Token (NFT) </a> </h3>
+                            <div class="text">
+                                A non-fungible token (NFT) is a unit of data stored on a digital ledger, called a
+                                blockchain.
+                            </div>
+                            <div class="more_link">
+                                <a href="javascript:;">
+                                    <span class="fa fa-arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cmpny_busns cmp_business_box">
+                        <div class="inner_box">
+                            <div class="icon_outer">
+                                <span class="icon_bg"></span>
+                                <div class="icon_box">
+                                    <img src="/static/assets/images/service_icon/iot.png" class="img-fluid" alt="" title="">
+                                </div>
+                            </div>
+                            <h3 class="cmp_Serv_name"> <a href="https://infograins.com/blockchain-services/use-cases"> IOT </a> </h3>
+                            <div class="text">
+                                IoT devices contain sensors and mini-computer processors that act on the data collected
+                                by the sensors via machine learning.
+                            </div>
+                            <div class="more_link">
+                                <a href="javascript:;">
+                                    <span class="fa fa-arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cmpny_busns cmp_business_box">
+                        <div class="inner_box">
+                            <div class="icon_outer">
+                                <span class="icon_bg"></span>
+                                <div class="icon_box">
+                                    <img src="/static/assets/images/service_icon/SoftwareDeveopment.png" class="img-fluid"
+                                        alt="" title="">
+                                </div>
+                            </div>
+                            <h3 class="cmp_Serv_name"> <a href="javascript:;"> Software development services </a> </h3>
+                            <div class="text">
+                                Software development is the process programmers use to build computer programs.
+                            </div>
+                            <div class="more_link">
+                                <a href="javascript:;">
+                                    <span class="fa fa-arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-lg-4 col-md-12 col-sm-12 col-12">
+                    <div class="cmpny_busns cmp_business_box">
+                        <div class="inner_box">
+                            <div class="icon_outer">
+                                <span class="icon_bg"></span>
+                                <div class="icon_box">
+                                    <img src="/static/assets/images/service_icon/PrivateBlockchain.png" class="img-fluid" alt=""
+                                        title="">
+                                </div>
+                            </div>
+                            <h3 class="cmp_Serv_name"> <a href="https://infograins.com/blockchain-services/private-blockchain"> Private Blockchain </a> </h3>
+                            <div class="text">
+                                In a public blockchain, anyone can read and write on the ledger. But you can't alter it
+                                once it gets on the ledger.
+                            </div>
+                            <div class="more_link">
+                                <a href="javascript:;">
+                                    <span class="fa fa-arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cmpny_busns cmp_business_box">
+                        <div class="inner_box">
+                            <div class="icon_outer">
+                                <span class="icon_bg"></span>
+                                <div class="icon_box">
+                                    <img src="/static/assets/images/service_icon/Cardano Blockchain.png" class="img-fluid"
+                                        alt="" title="">
+                                </div>
+                            </div>
+                            <h3 class="cmp_Serv_name"> <a href="https://infograins.com/blockchain-services/polkadot-and-cardano"> Cardano Blockchain </a> </h3>
+                            <div class="text">
+                                Cardano is a proof-of-stake blockchain platform: the first to be founded on
+                                peer-​reviewed research and developed through evidence-based methods.
+                            </div>
+                            <div class="more_link">
+                                <a href="javascript:;">
+                                    <span class="fa fa-arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cmpny_busns cmp_business_box">
+                        <div class="inner_box">
+                            <div class="icon_outer">
+                                <span class="icon_bg"></span>
+                                <div class="icon_box">
+                                    <img src="/static/assets/images/service_icon/MobileDeveopment.png" class="img-fluid" alt=""
+                                        title="">
+                                </div>
+                            </div>
+                            <h3 class="cmp_Serv_name"> <a href="https://infograins.com/services/hire-mobile-app-developers"> Mobile app development </a> </h3>
+                            <div class="text">
+                                The Mobile app development process requires creating software that can be installed on
+                                the device.
+                            </div>
+                            <div class="more_link">
+                                <a href="javascript:;">
+                                    <span class="fa fa-arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- company profile section close here -->
+
+    <!-- Industries section start here -->
+    <section class="industry_section">
+        <div class="container">
+            <div class="page_heading">
+                <!-- <p></p> -->
+                <h3>Top Industries We Serve</h3>
+            </div>
+            <div class="indsty_box">
+                <p>Infograins has been successfully implemented Blockchain for several industry like Supply chain, healthcare, Diamond, Food processing, Music Industry manufacturing, banning Insurance etc.</p>
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-6 my-4">
+                        <div class="insdtry_box">
+                            <div class="indsty_icon">
+                                <i class="fas fa-shopping-bag font_icon"></i>
+                            </div>
+                            <h5>Retail & Shopping</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-6 my-4">
+                        <div class="insdtry_box">
+                            <div class="indsty_icon">
+                                <i class="fas fa-university font_icon"></i>
+                            </div>
+                            <h5>Banking, Finance & Insurance</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-6 my-4">
+                        <div class="insdtry_box">
+                            <div class="indsty_icon">
+                                <i class="fas fa-industry font_icon"></i>
+                            </div>
+                            <h5>Industries & Manufacturing</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-6 my-4">
+                        <div class="insdtry_box">
+                            <div class="indsty_icon">
+                                <i class="fas fa-graduation-cap font_icon"></i>
+                            </div>
+                            <h5>Education & Tutoring</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-6 my-4">
+                        <div class="insdtry_box">
+                            <div class="indsty_icon">
+                                <i class="fas fa-car font_icon"></i>
+                            </div>
+                            <h5>Travel & Transportation</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-6 my-4">
+                        <div class="insdtry_box">
+                            <div class="indsty_icon">
+                                <i class="far fa-life-ring font_icon"></i>
+                            </div>
+                            <h5>Social Networking & Dating</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-6 my-4">
+                        <div class="insdtry_box">
+                            <div class="indsty_icon">
+                                <i class="fab fa-telegram font_icon"></i>
+                            </div>
+                            <h5>Media & Advertising</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-6 my-4">
+                        <div class="insdtry_box">
+                            <div class="indsty_icon">
+                                <i class="fas fa-building font_icon"></i>
+                            </div>
+                            <h5>Property & Real Estate</h5>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Industries section close here -->
+
+    <!-- counter serctio start here -->
+    <section class="counter_section">
+        <div class="container" id="targetId">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                    <div class="counter">
+                        <div class="counter-icon">
+                            <i class="fa fa-globe"></i>
+                        </div>
+                        <span class="counter-value">8</span>
+                        <h3>Years of Experienced</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                    <div class="counter counter_blue">
+                        <div class="counter-icon">
+                            <i class="fa fa-rocket"></i>
+                        </div>
+                        <span class="counter-value">250</span>
+                        <h3>Happy Clients</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                    <div class="counter counter_green">
+                        <div class="counter-icon">
+                            <i class="fas fa-trophy"></i>
+                            <!-- <i class="fa fa-rocket"></i> -->
+                        </div>
+                        
+                        <span class="counter-value">20</span>
+                        <h3>Awards Won</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                    <div class="counter counter_purple">
+                        <div class="counter-icon">
+                            <i class="fas fa-headset"></i>
+                            <!-- <i class="fa fa-rocket"></i> -->
+                        </div>
+                        <span class="counter-value">50</span>
+                        <h3>Expert Consultant</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- counter serctio close here -->
+
+
+   
+    <!-- owl carousel slider close here -->
+
+    <!-- blog section start here -->
+    <section class="blog_section">
+        <div class="container">
+            <div class="page_heading mb-5">
+                <p>NEWS & BLOG</p>
+                <h3>Latest news from our blog</h3>
+            </div>
+            <div class="row">
+            {% for i in blog %}
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <div class="blog_box">
+                        <div class="blog_img">
+                            <img src="{{i.blog_image.url}}" alt="" class="img-fluid">
+                        </div>
+                        <div class="blog_content">
+                            <a href="javascript:;" class="blog_date">{{i.blog_date}}</a>
+                            <a href="{% url 'blog' %}{{i.blog_slug}}" class="blog_heading">{{i.blog_title|slice:":40"}}<span
+                                class="font-weight-light text-danger" style="font-size: .7em;">&nbsp; (...more)
+                            </span></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="industry_section">
+        <div class="container">
+            <div class="page_heading">
+                <!-- <p></p> -->
+                <h3>Awards & Recognitions Received By Infograins Group</h3>
+            </div>
+            <div class="indsty_box">
+                <p>Getting noticed motivates you to achieve more. We are honored to have this collection of accolades in our collection, which brings us great delight and motivates us to strive even more.</p>
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-6 my-4">
+                        <div class="insdtry_box">
+                            <div class="">
+                                              
+                                    <img src="/static/assets/images/designrush.svg" class="img-fluid">
+                               </a>
+                            </div>
+                            <h5>DESIGNRUSH</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-6 my-4">
+                        <div class="insdtry_box">
+                            <div class="">
+                                <img src="/static/assets/images/batch.png" class="img-fluid">
+                            </div>
+                            <h5>GoodFirms</h5>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  
+    
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@800&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 576px){
+        .modal-dialog {
+            max-width: 50%;
+            margin: 1.75rem auto;
+        }
+}
+
+.modal_contentdiv{
+    /* background-color: blanchedalmond; */
+    background: linear-gradient(50deg, white,#d9b78a);
+    /* background: linear-gradient(50deg, white,#dfc868); */
+    padding: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+/* 
+.gitex_logodiv{
+    text-align: center;
+}
+
+.gitex_logodiv img{
+    width: 200px;
+    height: auto;
+} */
+
+.modal_headtxt{
+    font-weight: 900;
+    font-family: 'Spartan', sans-serif;
+    margin-top: 15px;
+}
+
+.modal_portion .portion-1{
+    font-weight: 600;
+    font-size: 18px;
+    color: crimson;
+    letter-spacing: .8px;
+}
+
+.address{
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 18px;
+    color: crimson;
+    letter-spacing: .8px;
+}
+
+.modal_portion .portion-2{
+    font-weight: bold;
+    font-size: 22px;
+    color: black;
+    margin: 0px 15px;
+}
+
+.modal_portion .portion-3{
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: .8px;
+    color: darkblue;
+}
+
+.modal_date{
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+    font-family: 'Spartan', sans-serif;
+}
+
+.modal_para{
+    font-size: 18px;
+    color: black;
+    letter-spacing: .6px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.modal_btn{
+    padding: 10px 25px;
+    border-radius: 25px;
+    background-color: #00afef;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+.modal_btn:hover{
+    color: #fff;
+    opacity: .8;
+}
+
+@media screen and (max-width:425px) {
+    .modal_btn{
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+}
+
+
+/* --------------------------------------------- setDate page ----------------------------------------  */
+
+.setdate_page{
+    padding: 100px;
+}
+
+.setdate_leftdiv{
+    box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.3);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.setdate_subtile{
+    color: grey;
+    font-weight: bold;
+}
+
+.setdate_head{
+    margin-top: 15px;
+    font-family: 'Spartan', sans-serif;
+}
+
+.setdate_clockdiv{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0px;
+    color: grey;
+    font-weight: bold;
+}
+
+.setdate_clockdiv .clock{
+    margin-left: 10px;
+}
+
+.setdate_adder{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0px;
+    color: grey;
+    font-weight: bold;
+}
+
+.setdate_adder .adder{
+    margin-left: 10px;
+}
+
+.setdate_lftpara{
+    padding: 15px;
+}
+
+
+/* ---------------- */
+
+.setdate_rightdiv{
+    box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.3);
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-flex;
+}
+
+.sd_rghtdivhead{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.calender_top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.calender_nav{
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+    align-items: center;
+}
+
+.date_link{
+    color: rgb(3, 100, 197);
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 50%;
+    text-decoration: none;
+    position: relative;
+}
+
+.date_link::before{
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -5px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgb(212, 234, 255);
+    z-index: -1;
+    padding: 15px;
+}
+
+.setdate_thead tr th{
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.setdatentime_btn{
+    text-decoration: none;
+    background-color: dodgerblue;
+    border-radius: 25px;
+    padding: 10px 25px;
+    color: #fff;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.setdatentime_btn:hover{
+    color: #fff;
+    opacity: .6;
+}
+/* --------------------------------------------------------------------------- */
+.event_formdiv{
+    box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.3);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.event_form_page{
+    padding: 100px;
+}
+
+.eventfrom_leftdiv{
+    width: 40%;
+    padding: 20px;
+}
+
+.event_formsec{
+    width: 60%;
+    padding: 20px;
+}
+
+.eventform_subtile{
+    font-weight: bold;
+    color: grey;
+}
+
+.eventform_head{
+    margin-top: 15px;
+    font-family: 'Spartan', sans-serif;
+}
+
+.eventform_clock{
+    color: grey;
+}
+
+.eventform_showtime{
+    display: flex;
+    color: rgb(10, 216, 171);
+    font-weight: bold;
+}
+
+.set_timedate{
+    margin-left: 10px;
+}
+
+.eventform_zone{
+    color: grey;
+    margin-top: 15px;
+}
+
+.eventform_backbtn{
+    margin-bottom: 15px;
+}
+
+.eventform_backbtn a{
+    color: #0d6efd;
+    text-decoration: underline;
+    background: #e9e8ff;
+    padding: 7px 10px;
+    border-radius: 50%;
+}
+
+.form_head{
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.selectTime{
+    display: none;
+}
+
+.time_div{
+    width: 326px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.time_show{
+    border: 1px solid dodgerblue;
+    border-radius: 5px;
+    padding: 0px 40px;
+    color: dodgerblue;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    margin-left: 25px;
+    transition: all .3s;
+}
+
+
+.confirm_btn{
+    background-color: dodgerblue;
+    border-radius: 5px;
+    border: 1px solid dodgerblue;
+    padding: 0px 20px;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 15px;
+    transition: all .3s;
+}
+
+.confirm_btn:hover{
+    color: #fff;
+    opacity: .7;
+}
+
+.select_time{
+    margin-top: 10px;
+    line-height: 3;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 351px;
+}
+
+.select_time::-webkit-scrollbar{
+    width: 10px;
+}
+
+.select_time::-webkit-scrollbar-thumb{
+    background-color: grey;
+    border-radius: 25px;
+}
+
+.select_time::-webkit-scrollbar-track{
+    background-color: floralwhite;
+}
+
+
+.dynamic_date{
+    padding: 20px;
+}
+
+
+.timezone-selector{
+    width:250px;
+    margin-bottom:5px;
+  }
+
+  .form-control:focus{
+      box-shadow: none !important;
+  }
+
+
+
+  /* ----------------------------- */
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+     margin: 0; 
+}
+</style>
+
+   {% comment %} <!-- Modal -->
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal_contentdiv">
+                    <div class="gitex_logodiv">
+                        <img src="/static/assets/images/logo-trans.png" alt="gitex-logo">
+                    </div>
+                    <h2 class="modal_headtxt">Meet Us At GITEX Dubai 2021</h2>
+                    <div class="modal_portion"> -->
+                        <!-- <span class="portion-1">Park Regis Business Bay</span>
+                        <span class="portion-2">|</span> -->
+                        <!-- <span class="portion-3">Stand Number Z5-294</span>
+                    </div>
+                    <div class="modal_date">17<sup>th</sup> - 20<sup>th</sup> Oct, 2021</div>
+                    <p class="modal_para">Schedule your meeting in advance to save your time and get the hassle free
+                        interaction with us at
+                        the event.</p>
+                    <p class="modal_para">We are available for you 24*7</p>
+                    <a href="https://calendly.com/infograinssoftware/15min" class="modal_btn">Schedule a meeting</a><br>
+                    <div class="address">Meeting : Park Regis Business Bay</div>
+                        
+                </div>
+            </div>
+        </div>
+    </div> -->
+    {% endcomment %} 
+<!-- owl slider -->
+<link rel="stylesheet" href="/static/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/static/assets/css/owl.theme.default.min.css">
+<script src="/static/assets/js/owl.carousel.min.js"></script>
+
+<script>
+    window.onload(
+    document.getElementById('exhibitionBtn').click()
+    )
+   jQuery('.client-slider').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 2
+            }
+        }
+    });
+// owl carousel js here
+
+
+</script>
+<script>
+    var span = document.querySelector(".typewriter span");
+    var textArr = span.getAttribute("data-text").split(", ");
+    var maxTextIndex = textArr.length;
+
+    var sPerChar = 0.15;
+    var sBetweenWord = 1.5;
+    var textIndex = 0;
+
+    typing(textIndex, textArr[textIndex]);
+
+    function typing(textIndex, text) {
+        var charIndex = 0;
+        var maxCharIndex = text.length - 1;
+
+        var typeInterval = setInterval(function () {
+            span.innerHTML += text[charIndex];
+            if (charIndex == maxCharIndex) {
+                clearInterval(typeInterval);
+                setTimeout(function () { deleting(textIndex, text) }, sBetweenWord * 1000);
+
+            } else {
+                charIndex += 1;
+            }
+        }, sPerChar * 1000);
+    }
+
+    function deleting(textIndex, text) {
+        var minCharIndex = 0;
+        var charIndex = text.length - 1;
+
+        var typeInterval = setInterval(function () {
+            span.innerHTML = text.substr(0, charIndex);
+            if (charIndex == minCharIndex) {
+                clearInterval(typeInterval);
+                textIndex + 1 == maxTextIndex ? textIndex = 0 : textIndex += 1;
+                setTimeout(function () { typing(textIndex, textArr[textIndex]) }, sBetweenWord * 1000);
+            } else {
+                charIndex -= 1;
+            }
+        }, sPerChar * 1000);
+    }
+</script>
+    {% endblock index %}
+   

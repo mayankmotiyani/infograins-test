@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block contactactivation %}active{% endblock contactactivation %}
+{% block title %}Infograins |  Contact{% endblock title %}
+{% block contact %}
+    <!-- contact section start here -->
+    <section class="contact_us_page">
+        <div class="container">
+            <div class="contact_page">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="cont_img">
+                            <img src="/static/assets/images/contact_img.png" alt="" class="imgg-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="cont_detail">
+                            <h2>Contact Us</h2>
+                            {% if error %}
+								{{error}}
+                            {% endif %}
+                            <form method="POST" id="contactForm" action="{% url 'contact' %}" class="contactForm">
+                                {% csrf_token %}
+                                <div class="mb-3">
+                                    <label for="fullName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" name="name" id="fullName" placeholder="Enter Full Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="emailid" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" name="email" id="emailid"
+                                        placeholder="Enter Email Address" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Type Subject" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" name="message" id="message" rows="4" required></textarea>
+                                </div>
+                                <div class="mb-3 justify-content-center d-flex">
+                                <div class="g-recaptcha" data-sitekey="6LcXadUbAAAAACByAVgkRKr0IJaAFMj5Xe4_wvZp"></div>
+                                </div>
+                                <button type="submit" class="btn cont_btn">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="office_addrs">
+            <div class="container">
+                <h3>Our Company Address</h3>
+                <div class="ofc_address">
+                    <div class="address_icon">
+                        <img src="/static/assets/images/office_adrs_img.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="address_info">
+                        <h5>Development Center</h5>
+                        <p class="cont_adrs">407, Atulya IT Park, Bhawarkuan Main Rd, Indore, Madhya Pradesh 452010</p>
+                        <div class="ofice_number">
+                            <a href="tel:9770477239">+91-9770477239</a>
+                            <a href="tel:9713406272">+91-9713406272</a>
+                        </div>
+                        <a href="mailto:info@infograins.com" class="mail_cont">info@infograins.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="other_addrs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 my-3">
+                        <div class="othr_adrs_info">
+                            <h4>UK OFFICE</h4>
+                            <ul class="list-unstyled">
+                                 <li>Apartment 4105, 25 Arena Tower Crossharbour Plaza, London E14 9YF</li>
+                                <li><a href="tel:+447401232155">+447401232155</a></li>
+                                {% comment %} <li><a href="mailto:uk@geeks4hire.com">uk@geeks4hire.com</a></li> {% endcomment %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 my-3">
+                        <div class="othr_adrs_info">
+                            <h4>USA OFFICE</h4>
+                            <ul class="list-unstyled">
+                                <li>135, 447 Broadway, 2nd Floor, New York, NY 10013, USA</li>
+                                <li><a href="tel:+12025196167">+12025196167</a></li>
+                                {% comment %} <li><a href="mailto:us@infograins.com">us@infograins.com</a></li> {% endcomment %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 my-3">
+                        <div class="othr_adrs_info">
+                            <h4>UAE OFFICE</h4>
+                            <ul class="list-unstyled">
+                                <li>FDRK3822 Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates</li>
+                                <li><a href="tel:+971585596272">+971585596272</a>
+                                </li>
+                                {% comment %} <li><a href="mailto:hk@infograins.com">hk@infograins.com</a></li> {% endcomment %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 my-3">
+                        <div class="othr_adrs_info">
+                            <h4>AUSTRALIA OFFICE</h4>
+                            <ul class="list-unstyled">
+                                <li>264 George Street, Sydney 2000</li>
+                                <li><a href="tel:+61480043472">+61480043472</a>
+                                </li>
+                                {% comment %} <li><a href="mailto:hk@infograins.com">hk@infograins.com</a></li> {% endcomment %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact section close here -->
+    {% endblock contact %}

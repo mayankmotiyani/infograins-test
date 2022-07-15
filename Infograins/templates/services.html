@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block servicesactivation %}active{%endblock servicesactivation %}
+{% block title %}Infograins | Services{% endblock title %}
+{% block services %}
+    <!-- inner page banner start here -->
+    <section class="banner_section">
+        <div class="banner_img">
+            <img src="/static/assets/images/inner_banner.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="container">
+            <div class="banner_txt">
+                <h2 class="mb-0">Services</h2>
+            </div>
+        </div>
+    </section>
+    <!-- inner page banner close here -->
+
+    <!-- service section start here -->
+    <section class="service_page">
+        <div class="container">
+            {% for ser in servicesitems %}
+            <h3 class="serv_heading">{{ser.0.0.service_category}}</h3>
+            <div class="serv_box">
+                <div class="row">
+                    {% for i in ser.0 %}
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                        <a href="{% url 'services' %}{{i.service_slug}}" class="serv_names">
+                            <div class="serv_page_img">
+                                <img src="/media/{{i.service_img}}" alt="" class="img-fluid">
+                            </div>
+                            <h5 class="serv_page_txt mb-0">{{i.service_title}}</h5>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+            <!-- E-Commerce Development service close here -->
+        </div>
+    </section>
+    <!-- service section start here -->
+{% endblock services %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{products.product_title}}{% endblock title %}
+{% block productsactivation %}active{%endblock productsactivation %}
+{% block products %}
+<div class="img-fluid bg-gradient-dark w-100"
+	style="width: 100%; height: 25vh; background-position: center; background-repeat: no-repeat; background-size: cover; background-image: url('/static/images/resources.jpg');">
+</div>
+
+<a href="{% url 'products' %}" class="btn sticky-top" ><i class="ml-3 mt-5 p-1 fa fa-arrow-left text-white rounded-pill border bg-success " style="font-size: 18px;" aria-hidden="true"></i>
+</a>
+<section class="ftco-section ftco-degree-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 ftco-animate">
+				{% if products %}
+				<h2 class="mb-3 font-weight-bolder ">{{products.product_title}}</h2>
+				<p>{{products.product_para|safe}}</p>
+				<p>
+					{% endif %}
+			</div>
+			<div class="col-lg-4 mx-auto my-lg-0 my-sm-4 ftco-animate">
+				<h3 class="text-lg-center">Our more products</h3>
+				{% for i in recentproducts %}
+				<div class="card mb-3 ml-auto my-4 shadow" style="width: auto; min-height: auto;">
+					<div class="row">
+						<div class="col-12">
+							<div class="card-body">
+								<a href="{% url 'products' %}{{i.id}} ">
+									<h6 class="card-title text-center ">{{i.product_title|slice:":40"}} <span
+											class="font-weight-light text-danger" style="font-size: .7em;">&nbsp;
+											(...more) </span></h6>
+								</a>
+								<p class="card-text"><small class="text-muted">{{i.product_date}}</small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock products %}

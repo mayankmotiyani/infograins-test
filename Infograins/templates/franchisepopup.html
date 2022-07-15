@@ -1,0 +1,199 @@
+<style>
+    p {
+
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    h2,
+    h3 {
+        font-size: 23px;
+    }
+</style>
+<!-- contact section start here -->
+<section class="contact_us_page">
+    <div class="container">
+        <div class="contact_page">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <!-- <div class="cont_img">
+                            <img src="/static/assets/images/contact_img.png" alt="" class="imgg-fluid">
+                        </div> -->
+                    {% comment %} <div class="side_Content">
+                        <h3>Congratulations on your decision to apply for Infograins franchise ownership!</h3>
+                        <p style="color: #484848;">You are merely taking the first step in our franchise application
+                            process by visiting this website.</p>
+
+                        <br>
+                        <h2>Be Part of Our Infograins Nationalised Franchise Network.</h2>
+                        <p style="color: #484848;">Learn more about our unique business model and apply now to become a
+                            part of our nationwide franchise network. In both developed and emerging nations,
+                            franchising is a critical component of our overall expansion strategy. Our franchisees have
+                            all of the tools they need to succeed, thanks to our customer-focused solutions, significant
+                            operational expertise, and cutting-edge technology. Entrepreneurs and well-established firms
+                            with industry experience or non-experience who are creative, inventive, and forward-thinking
+                            are encouraged to join the Infograins network and be a part of our exciting and dynamic
+                            growth narrative.</p>
+
+                        <br>
+                        <h2>How to Get Started</h2>
+                        <p style="color: #484848;">The application procedure is straightforward. To analyse your
+                            financial, operational, and commercial skills, complete the Infograins Franchise Application
+                            and submit your business plan. After you've completed and submitted the form, a member of
+                            our franchise team will contact you shortly.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> {% endcomment %}
+
+</section>
+<!-- contact section close here -->
+<!-- franchise Modal -->
+<div id="popUp_Modal">
+    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: #fff;">
+                <div class="modal-header d-none" style="justify-content: center;">
+                    <h5 class="modal-title apply franchise_TXT" id="exampleModalLabel">Apply For Franchise</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+
+                    <!-- popupform open -->
+                    <form class="row g-3" method="POST" id="franchiseForm">
+
+
+                        {% csrf_token %}
+                        <div class="col-md-6">
+                            <label class="form-label">First Name</label>
+                            <input id="firstName1" type="name" class="form-control">
+                            <p id="usercheckfirst1" style="color: red;">
+                                **First name is missing
+                            </p>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <label class="form-label">Last Name</label>
+                            <input id="lastName1" type="name" class="form-control">
+                            <p id="userchecklast1" style="color: red;">
+                                **Last name is missing
+                            </p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Email</label>
+                            <input type="email" id="emailAddress1" class="form-control">
+                            <p id="usercheckemail1" style="color: red;">
+                                **Email Address is missing
+                            </p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="inputContact" class="form-label">Contact</label>
+                            <input type="number" class="form-control" id="inputContact1">
+                            <p id="usercheckphone1" style="color: red;">
+                                **Contact No. is missing
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress1" placeholder="Address">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label">State</label>
+                            <select id="inputState1" class="form-select" required>
+                                <option selected>Select</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">City</label>
+                            <select id="inputCity1" class="form-select" required>
+                                <option selected>Select</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="inputSource" class="form-label">How did you hear from us ?</label>
+                            <select id="inputSource1" class="form-select" required>
+                                <option selected>Select</option>
+                                <option>Facebook</option>
+                                <option>Instagram</option>
+                                <option>Linkedin</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+
+                        <div class="md-form d-none" id="forOther">
+                            <textarea id="OtherSource1" class="md-textarea form-control" rows="3"></textarea>
+                        </div>
+
+
+                        <div class="md-form">
+                            <label for="form7">Notes (Optional)</label>
+                            <textarea id="Notes1" class="md-textarea form-control" rows="3"></textarea>
+                        </div>
+
+                        <div id="click" class="modal-footer">
+                            <button style="display: none;" id="success_popupClick1" class="btn btn-primary"
+                                data-bs-dismiss="modal" data-bs-toggle="modal"
+                                data-bs-target="#successful1">Submit</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                style="border:none; border-radius: 2px;" onclick="setKey()">Close</button>
+                            <button type="button" id="success_popup1" class="btn btn-primary"
+                                style="border:none; background-color: #f96900; border-radius: 2px;">Submit</button>
+                            <div class="loader"></div>
+                            <button type="button" style="display: none;" id="app_franBtn"
+                                class="btn btn-primary app_franBtn" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">Apply for Franchise</button>
+                        </div>
+
+
+
+                    </form>
+                    <!--popup form-close-->
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- success Modal  -->
+<div class="modal fade" id="successful1" data-bs-keyboard="false" tabindex="-1" aria-labelledby="successfulLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background-color: #fff;">
+            <div class="modal-body">
+                <div class="Successfully_popup">
+                    <div class="success_icon">
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                    <h2>Successfull!</h2>
+                    <h5>Thanks for Applying</h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function setKey() {
+        sessionStorage.setItem("key", "1");
+    }
+
+    let key = sessionStorage.getItem("key")
+    console.log(key);
+    if (key == "1") {
+        document.getElementById("popUp_Modal").getElementsByTagName("div")[0].setAttribute("id", "staticBackdrop1")
+        console.log("conditio", key);
+    }
+</script>

@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap");
+
+body {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+}
+
+/* ===========hero section css start============ */
+.bg-img {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255), rgba(255, 255, 255, 0.7)),
+        url("../img/hero.jpg");
+    background-size: cover;
+}
+.main-section{
+    padding: 30px 0px;
+}
+.logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.address {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+}
+
+.date {
+    display: flex;
+}
+span i {
+    color: #ffffff;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(45deg, #ff5531, #ffc371);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-right: 10px;
+    text-indent: 0;
+    padding: 9px;
+}
+.address_name {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 900;
+    color: #e54220;
+    font-size: 24px;
+}
+.address .location{
+    margin-left: 20px;
+}
+.address span {
+    font-weight: 600;
+    color: #041a57;
+}
+.content h1 {
+    color: #041a57;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 43px;
+    margin-bottom: 35px;
+}
+.content .text-red {
+    color: #e54220;
+}
+
+.tech_newevent h2 {
+    color: #041a57;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 800;
+}
+.shedule_btn button {
+    font-size: 18px;
+    margin-top: 30px;
+    background: linear-gradient(45deg, #ff5531, #ffc371);
+    color: #fff;
+    border: 2px solid #e54220;
+    padding: 8px 40px;
+    border-radius: 20px;
+}
+.shedule_btn button:hover {
+    background: linear-gradient(45deg, #fff, #fff);
+    color: #e54220;
+    border: 2px solid #e54220 !important;
+}
+/* ===========hero section css end============ */
+
+/* ===========infosoft section css start============ */
+.infosoft_section{
+    background: #f5f1eb;
+    padding: 100px;
+}
+
+.infosoft_section h3 {
+    font-weight: bold;
+    line-height: 1.3;
+    color: #041a57;
+    font-size: 26px;
+}
+.infosoft_section p{
+    line-height: 1.8;
+    color: #666;
+}
+.infosoft_img img{
+    height: 370px;
+    border-radius: 21px;
+    object-fit: cover;
+}
+.info-content{
+    padding: 50px 0px 30px 30px;
+}
+/* ===========infosoft section css end============ */
+
+/* ===========about section css start============ */
+.about{
+    /* background: #f5f1eb; */
+    padding: 50px;
+}
+.about h3{
+    text-align: center;
+    text-transform: uppercase;
+    color: #041a57;
+    font-weight: bold;
+}
+.about_smry{
+    padding: 20px;
+}
+.about_smry p{
+    color: #666;
+    line-height: 1.8;
+}
+/* ===========about section css end============ */
+
+/* ============media query css========== */
+@media (min-width:320px) and (max-width:424px){
+    .logo img{
+        height: 90px;
+    }
+    .address {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -5px !important;
+    }
+    .address .location{
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+    .address_name {
+        margin-bottom: 12px;
+        font-size: 19px;
+    }
+    .content h1 {
+        font-size: 23px;
+        margin-bottom: 3px;
+    }
+    .tech_newevent h2 {
+        font-size: 20px;
+    }
+    .shedule_btn button {
+        font-size: 15px;
+        margin-top: 26px;
+        padding: 8px 28px;
+    }
+
+    .infosoft_section{
+        padding: 70px 0px 50px 0px ;
+    }
+    .infosoft_img img{
+        height: 300px;
+        border-radius: 21px;
+        object-fit: cover;
+    }
+    .infosoft_section h3 {
+        font-size: 20px;
+    }
+    .info-content{
+        padding: 50px 0px 30px 5px;
+    }
+    .about{
+        padding: 50px 0px 0px 0px;
+    }
+    .about_smry{
+        padding: 5px;
+    }
+}
+
+@media (min-width:425px) and (max-width:992px){
+    .logo img{
+        height: 100px;
+    }
+    .address {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+       
+    }
+   
+    .address_name {
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+    .content h1 {
+        font-size: 23px;
+        line-height: 2;
+        margin-bottom: 8px;
+    }
+    .tech_newevent h2 {
+        font-size: 21px;
+    }
+    .shedule_btn button {
+        font-size: 15px;
+        margin-top: 26px;
+        padding: 8px 28px;
+    }
+    .infosoft_section{
+        padding: 70px 0px 50px 0px ;
+    }
+    .infosoft_img img{
+        height: 350px;
+        border-radius: 21px;
+        object-fit: cover;
+    }
+    .infosoft_section h3 {
+        font-size: 20px;
+    }
+    .info-content{
+        padding: 20px 0px 30px 5px;
+    }
+    .about{
+        padding: 50px 0px 0px 0px;
+    }
+    .about_smry{
+        padding: 5px;
+    }
+}

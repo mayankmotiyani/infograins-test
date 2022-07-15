@@ -1,0 +1,243 @@
+<script>
+
+    $(document).ready(function () {
+        $.ajax({
+            type: "post",
+            data: {
+                "country": "India"
+            },
+            url: "https://countriesnow.space/api/v0.1/countries/states",
+            success: function (data) {
+                let get_states = data.data.states;
+                get_states.forEach(element => {
+                    $("#inputState").append('<option value="' + element.name + '">' + element.name + '</option>');
+                });
+            },
+        });
+    });
+
+    $(document).ready(function () {
+        $("#inputState").change(function () {
+            let get_state = $("#inputState").val();
+            let get_states_and_cities = {};
+            get_states_and_cities['country'] = "India";
+            get_states_and_cities["state"] = get_state;
+
+            $.ajax({
+                type: "post",
+                data: get_states_and_cities,
+                url: "https://countriesnow.space/api/v0.1/countries/state/cities",
+                success: function (data) {
+                    $("#inputCity").empty();
+                    let get_cities = data.data;
+                    get_cities.forEach(element => {
+                        $("#inputCity").append(
+                            '<option value="' +
+                            element +
+                            '">' +
+                            element +
+                            "</option>"
+                        );
+                    })
+                },
+            });
+        })
+    })
+
+    $(document).ready(function () {
+        $("#inputSource").change(function () {
+            let get_source = $("#inputSource").val();
+            if (get_source == 'Others') {
+                $("#forOther").removeClass("d-none");
+            }
+            else {
+                $("#forOther").addClass("d-none");
+            }
+        })
+    })
+
+
+
+    $(document).ready(function () {
+        $('#usercheckfirst').hide();
+        let firstNameError = true;
+        $('#firstName').keyup(function () {
+            let firstnameValue = $('#firstName').val();
+            validatefirstName(firstnameValue);
+        });
+
+        function validatefirstName(firstnameValue) {
+            if (firstnameValue === '') {
+                console.log("empty")
+                $('#usercheckfirst').show();
+                $('#usercheckfirst').html("**First name is missing")
+                firstNameError = false;
+                return false;
+            }
+            else if ((firstnameValue.length < 3) ||
+                (firstnameValue.length > 10)) {
+                $('#usercheckfirst').show();
+                $('#usercheckfirst').html
+                    ("**Length of firstname must be between 3 and 10");
+                firstNameError = false;
+                return false;
+            }
+            else {
+                $('#usercheckfirst').hide();
+            }
+        }
+
+        $('#userchecklast').hide();
+        let lastNameError = true;
+        $('#lastName').keyup(function () {
+            let lastnameValue = $('#lastName').val();
+            validateLastName(lastnameValue);
+        });
+
+        function validateLastName(lastnameValue) {
+            if (lastnameValue === '') {
+                $('#userchecklast').show();
+                $('#userchecklast').html("**Last name is missing")
+                lastNameError = false;
+                return false;
+            }
+            else if ((lastnameValue.length < 3) ||
+                (lastnameValue.length > 10)) {
+                $('#userchecklast').show();
+                $('#userchecklast').html
+                    ("**Length of lastname must be between 3 and 10");
+                lastNameError = false;
+                return false;
+            }
+            else {
+                $('#userchecklast').hide();
+            }
+        }
+
+
+        $("#usercheckemail").hide();
+        // let emailAddressError = true; ///c///
+        $("#emailAddress").keyup(function () {
+            let get_email = $("#emailAddress").val()
+            // validateEmail(get_email); ///c///
+            if (get_email.length < 1) {
+                $("#usercheckemail").show();
+                $("#usercheckemail").html("**Email Address is missing");
+            }
+            else {
+                $("#usercheckemail").hide();
+                IsEmail($("#emailAddress").val())
+            }
+        });
+        function IsEmail(email) {
+            var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!regex.test(email)) {
+                $("#usercheckemail").show()
+                $("#usercheckemail").html("Email address is not valid")
+            } else {
+                $("#usercheckemail").hide();
+            }
+        }
+
+        $("#usercheckphone").hide();
+        $("#inputContact").keyup(function () {
+            let get_number = $("#inputContact").val();
+            if (get_number.toString().length < 1) {
+                $("#usercheckphone").show();
+                $("#usercheckphone").html("**Contact No. is missing");
+            }
+            else {
+                $("#usercheckphone").hide();
+                validatePhone($("#inputContact").val());
+            }
+        });
+
+        function validatePhone(txtPhone) {
+
+            var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+            if (filter.test(txtPhone)) {
+                $("#usercheckphone").hide();
+            }
+            else {
+                $("#usercheckphone").show();
+                $("#usercheckphone").html("Phone number is not valid");
+            }
+        }
+
+        const submit = document.getElementById("success_popup");
+        submit.addEventListener('click', validate);
+        function validate(e) {
+            e.preventDefault();
+
+            let get_firstName = $("#firstName").val();
+            validatefirstName(get_firstName)
+            let get_lastName = $("#lastName").val();
+            validateLastName(get_lastName)
+            let get_Email = $("#emailAddress").val();
+            if (get_Email.length < 1) {
+
+                $("#usercheckemail").show();
+                $("#usercheckemail").html("**Email Address is missing")
+            }
+            else {
+                $("#usercheckemail").hide();
+            }
+            let get_phone = $("#inputContact").val();
+            if (get_phone.toString().length < 1) {
+                $("#usercheckphone").show();
+                $("#usercheckphone").html("**Contact No. is missing");
+            }
+            else {
+                $("#usercheckphone").hide();
+            }
+            let get_Address = $("#inputAddress").val();
+            let get_state = $("#inputState option:selected").text();
+            let get_city = $("#inputCity option:selected").text();
+
+            let get_source = $("#inputSource option:selected").text();
+            let get_other_source = document.getElementById("OtherSource").value;
+            let get_Notes = document.getElementById("Notes").value;
+
+            let csrfmiddlewaretoken = $("input[name=csrfmiddlewaretoken]").val();
+
+            if (get_firstName !== "" && get_lastName !== "" && get_Email !== "" && get_Address !== "" && get_state !== "" && get_city !== "" && get_source !== "") {
+                console.log("Hello World From jquery")
+
+
+                $.ajax({
+                    type: "POST",
+                    data: {
+                        'csrfmiddlewaretoken': csrfmiddlewaretoken,
+                        'firstname': get_firstName,
+                        'lastname': get_lastName,
+                        'email': get_Email,
+                        'contact': get_phone,
+                        'address': get_Address,
+                        'state': get_state,
+                        'city': get_city,
+                        'lead_source': get_source,
+                        'notes': get_Notes,
+                        'specify': get_other_source,
+                    },
+                    url: "{% url 'franchise' %}",
+                    success: function (data) {
+                        console.log("normal form");
+                        $('#success_popupClick2').click()
+                        console.log(200);
+                        sessionStorage.setItem("key", "1");
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                })
+            }
+            else {
+                console.log(false);
+            }
+        }
+    })
+</script>
+
+<script>
+    document.getElementById('app_franBtn').click()
+</script>

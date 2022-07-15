@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+
+  
+{% block title %}Infograins | {{nft2.title}} {% endblock title %}
+
+
+
+
+{% block nft %}
+
+  <!-- inner page banner start here -->
+  <section class="banner_section">
+    <div class="banner_img">
+        <img src="/static/assets/images/inner_banner.jpg" alt="" class="img-fluid">
+    </div>
+    <div class="container">
+        <div class="banner_txt">
+            <h2 class="mb-0">NFT</h2>
+        </div>
+    </div>
+</section>
+<!-- inner page banner close here -->
+<section class="nft_page_section py-5">
+  <div class="container">
+      <div class="blckchn_content">
+          <div class="d-flex align-items-start">
+            <div class="" id="v-pills-tabContent">
+{% for i in  nft1 %}
+              
+              <div class="tab-pane fade show active" id="public_blockchain" role="tabpanel"
+                  aria-labelledby="public_blockchain-tab">
+                  <div class="nft_box_content">
+                      <div class="nft_heading">
+                          {{i.title}}
+                      </div>
+                      <div class="blockchain_txt">
+                          <p>{{i.para|safe}}</p>
+                      </div>
+                  </div>
+              </div>
+            
+                
+              {% endfor %}
+          </div>
+      </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+  
+    
+ 
+    
+  <!-- <h4>{{i.title}}</h4> -->
+
+
+
+
+<!-- ============================= -->
+<!-- <p>{{i.para|safe}}</p> -->
+
+<!-- ============================== -->
+
+<!-- {{i.img}} -->
+<!-- ============================== -->
+
+
+   
+{% endblock nft %}

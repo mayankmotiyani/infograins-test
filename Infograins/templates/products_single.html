@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% block productactivation %}active{% endblock productactivation %}
+{% block title %}Infograins |  Products{% endblock title %}
+
+{% block products %}
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------- -->
+<style>
+    .product_row {
+        background: #192a51;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .product_content {
+        padding: 40px;
+    }
+
+    .product_content h2 {
+        font-size: 55px;
+        margin-bottom: -4px;
+        margin-top: 0;
+    }
+
+    .product_content h5 {
+        font-size: 23px;
+    }
+
+    .product_content p {
+        font-size: 17px;
+        padding-right: 15%;
+        width: 100%;
+        line-height: 24px;
+        margin-bottom: 3rem;
+        margin-top: 20px;
+    }
+
+    .product_content a {
+        margin-top: 25px;
+        background: #fff;
+        padding: 15px 25px;
+        border-radius: 40px;
+        color: #000;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+        color: #1a1b1c;
+    }
+
+    .product_content a:hover {
+        background-color: #ef6e10;
+        color: #fff;
+    }
+
+    .product_img img {
+        display: block;
+        height: 500px;
+        margin: auto;
+    }
+    .product_content .view_btn{
+        margin-top: 40px;
+    }
+</style>
+
+
+<body>
+ <!-- inner page banner start here -->
+ {% comment %} <section class="banner_section">
+    <div class="banner_img">
+        <img src="/static/assets/images/inner_banner.jpg" alt="" class="img-fluid">
+    </div>
+    <div class="container">
+        <div class="banner_txt">
+            <h2 class="mb-0">Products</h2>
+        </div>
+    </div>
+</section> {% endcomment %}
+{% for i in allProds %}
+    <section class="banner_section">
+        <div class="banner_img">
+            <img src="/static/assets/images/inner_banner.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="container">
+            <div class="banner_txt">
+                <h2 class="mb-0">{{i.productname}}</h2>
+            </div>
+        </div>
+    </section>
+    <!-- inner page banner close here -->
+
+    <!-- product page content start here -->
+    <section class="service_categry_page">
+        <div class="container">
+            <div class="srv_categry_content">
+                <p>{{i.product_paragraph|safe}}</p>
+            </div>
+        </div>
+      
+    </section>
+    {% endfor %}
+
+
+<!-- inner page banner close here -->   
+<section class="product_page_section">
+{% comment %} {% for pro in productsitems %}
+<div class="product_section">
+    <div class="container">
+        <div class="product_row mt-5">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="product_content">
+                        <h2>{{pro.productname}}</h2>
+                        <h5>Blockchain Product</h5>
+                        {{pro.product_description}}
+                        <div class="view_btn">
+                            <a href="{% url 'products' %}{{pro.product_slug}}">VIEW CASE STUDY</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="product_img">
+                        <img src="{{pro.product_image.url}}" alt="product_img"
+                            class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %} {% endcomment %}
+</section>
+<br>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+{% endblock products %}
+
+   
+    <!-- product page content close here -->
+   

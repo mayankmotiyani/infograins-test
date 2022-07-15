@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{resources.resource_title}}{% endblock title %}
+{% block resourcesactivation %}active{%endblock resourcesactivation %}
+{% block resources %}
+<div class="img-fluid bg-gradient-dark w-100"
+	style="width: 100%; height: 30vh; background-position: center; background-repeat: no-repeat; background-size: cover; background-image: url('/static/images/resources.jpg');">
+</div>
+
+<section class="ftco-section ftco-degree-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 ftco-animate">
+				{% if resources %}
+				<h2 class="mb-3 font-weight-bolder ">{{resources.resource_title}}</h2>
+				<p>{{resources.resource_para|safe}}</p>
+				<p>
+					{% endif %}
+			</div>
+			<div class="col-lg-4 mx-auto my-lg-0 my-sm-4 ftco-animate">
+				<h3 class="text-lg-center">Our more resources</h3>
+				{% for i in recentresources %}
+				<div class="card mb-3 ml-auto my-4 shadow" style="width: auto; min-height: auto;">
+					<div class="row">
+						<div class="col-12">
+							<div class="card-body">
+								<p class="card-text"><small class="text-muted">{{i.resource_date}}</small></p>
+								<a href="{% url 'resources' %}{{i.id}} ">
+									<h6 class="card-title ">{{i.resource_title|slice:":40"}} <span
+											class="font-weight-light text-danger" style="font-size: .7em;">&nbsp;
+											(...more) </span></h6>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock resources %}

@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block title %}Infograins | Career{% endblock title %}
+{% block career %}
+
+<style>
+  .show-more-btn {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: none;
+    border: none;
+    color: #ef6e10;
+    font-size: 13px;
+}
+  </style>  
+
+  <section class="page_banner career_bg">
+    <h2 class="page_heading text-center">Career</h2>
+  </section>
+
+  <!--Page banner close here-->
+
+  <section class="career_page">
+    <div class="container">
+      <div class="row">
+        {% if Career %}
+        <div class="col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-10 offset-sm-1 col-12">
+          {% endif %}
+          <div class="row justify-content-center">
+           
+
+            
+            {% if Career %}
+            {% for i in Career %}
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+           
+              <div class="career_box">
+              
+               
+                <h3 class="mb-3"> {{i.job_title}}</h3>
+                <span class="vac_opne">{{i.opening}} Opening</span>
+                <div class="element"
+                  data-config='{ "type": "text", "limit": 120, "after": 50, "more": "Read more", "less": "Read less" }'>
+                  {{i.job_description}}
+                </div>
+                <ul class="list-inline">
+                  <li class="list-inline-item"><b>Experience :</b> <span>{{i.experience_in_years}}</span></li>
+                  <li class="list-inline-item"><b>Location :</b> <span>{{i.location}}</span></li>
+                  <li class="list-inline-item"><b>Join Duration :</b> <span>{{i.join_duration_days}} Days</span></li>
+                </ul>
+                <a href="{% url 'jobform' %}" class="apply_btn" >Apply
+                  Now</a>
+              </div>
+             
+               
+               </div>
+               {% endfor %}
+               {% else %}
+               <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                
+                <div class="career_box mb-5">
+                  {% include 'nothiring.html' %} 
+                 
+                 </div>
+                
+                 
+                 </div>
+                 {% endif %}
+
+              
+
+
+             
+              
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+
+<!-- 
+<script src="/static/assets/js/showMore.ie.min.js"></script>  -->
+
+
+<script src="https://cdn.jsdelivr.net/gh/tomik23/show-more@1.1.2/dist/js/showMore.min.js"></script> 
+
+<script>
+  new ShowMore('.element');
+</script>
+
+{% endblock career %}

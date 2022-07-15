@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BlockChain Services{% endblock title %}
+{% block blockchainactivation %}active{%endblock blockchainactivation %}
+{% block blockchain %}
+<div class="img-fluid bg-gradient-dark w-100"
+    style="width: 100%; height: 30vh; background-position: center; background-repeat: no-repeat; background-size: cover; background-image: url('/static/images/resources.jpg');">
+</div>
+
+<!-- service section start here -->
+<section class="info_service">
+    <div class="container">
+        <div class="row">
+            <!-- left service menu start here -->
+            <div class="col-lg-3 col-md-4 col-sm-12 col-12">
+                <div class="nav flex-column nav-pills info_service_left" id="v-pills-tab" role="tablist"
+                    aria-orientation="vertical">
+                    {% for i in block_chain_service %}
+                    <a class="nav-link {% if id == i.id %} active {% endif %}" href="{% url 'blockchain_service' %}{{i.id}}">{{i.service_title}}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- left service menu close here -->
+
+            <!-- left service content start here -->
+            <div class="col-lg-9 col-md-8 col-sm-12 col-12">
+                <div class="tab-content info_service_right" id="v-pills-tabContent">
+                    {% if single_block_chain_service %}
+                    <div class="fade show">
+                        <div class="serv_content">
+                            <p>{{single_block_chain_service.service_para|safe}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <!-- left service content close here -->
+        </div>
+    </div>
+</section>
+<!-- service section close here -->
+
+
+
+
+
+
+
+<!-- <div class="container my-5">
+  <div class="row">
+   
+   <div class="col-sm-4">
+      
+        <h5 class="w-100 bg-warning text-white"><a href=""><button class="btn btn-outline-warning w-100 text-white"></button></a></h5>
+
+   </div>
+   <div class="col-sm-8">
+    </p>
+    
+   </div>
+  </div>
+</div> -->
+{% endblock blockchain %}

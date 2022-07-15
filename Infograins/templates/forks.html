@@ -1,0 +1,889 @@
+{% extends 'base.html' %}
+{% block forkactivation %}active{% endblock forkactivation %}
+
+{% block fork %}
+
+
+    {% comment %} <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forks</title>
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://infograins.com/static/assets/css/bootstrap.min.css">
+    <!-- font awesome icon -->
+    <link rel="stylesheet" href="https://infograins.com/static/assets/css/all.css">
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="fork.css">
+
+    <!-- Bootstrap JS file  -->
+    <script src="https://infograins.com/static/assets/js/jquery.min.js"></script>
+
+    <script src="https://infograins.com/static/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://infograins.com/static/assets/js/all.min.js"></script> {% endcomment %}
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .forkNav .nav-tabs {
+            justify-content: center;
+            background-image: linear-gradient(181deg, #ff8a35, #d55a00);
+        }
+
+        .forkNav .nav-tabs .nav-link {
+            color: #fff;
+            font-size: 1.3rem;
+        }
+		
+		.forkNav .nav-tabs .nav-link a{
+		color:#fff;}
+
+        .forkNav .nav-tabs .nav-link.active {
+            color: #ee7720;
+            font-size: 1.3rem;
+        }
+
+        .forkNav .nav-tabs .nav-link:hover {
+            border: #ff8a35;
+            background-color: #ff8a35;
+        }
+
+        .forkNav .nav-tabs .nav-link:focus {
+            border-color: #ffffff;
+            background-color: #ffffff;
+        }
+
+        .forkNav .innerBxs {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            background: #fff;
+            border-radius: 15px;
+            position: relative;
+            min-height: 165px;
+            justify-content: center;
+            box-shadow: 0px 0px 5px #f17a23;
+        }
+
+        .forkNav .innerBxs img {
+            width: 50%;
+            margin-bottom: 15px;
+        }
+
+        .forkNav .NFT_ForkSection {
+            padding: 50px 0px;
+        }
+
+        .forkNav .DeFi_ForkSection {
+            padding: 50px 0px;
+        }
+
+        .forkNav .Crypto_Coin_ForkSection {
+            padding: 50px 0px;
+        }
+
+        .forkNav .Crypto_Token_ForkSection {
+            padding: 50px 0px;
+        }
+
+        .forkNav .Blockchain_ForkSection {
+            padding: 50px 0px;
+        }
+
+        .forkNav .innerBxs h6 {
+            text-align: center;
+        }
+
+        .forkNav .innerBxs input {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #fff;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px #c95400;
+        }
+
+        .forkNav .innerBxs input:focus {
+            box-shadow: 0px 0px 5px #c95400;
+        }
+
+        .forkNav .form-check-input:checked {
+            background-color: #c95400;
+            box-shadow: 0px 0px 5px #c95400;
+        }
+
+        .forkNav {
+            /* background-image: linear-gradient(45deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/block.jpg'); */
+            background-image: linear-gradient(181deg, #ffffff, rgb(255 255 255 / 31%)), url('/images/block.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+
+        .forkNav .getinTouchBtn {
+            display: flex;
+            justify-content: center;
+        }
+
+        .forkNav .getinTouchBtn button {
+            background-image: linear-gradient(45deg, #ff8a35, #9d4301);
+            color: #ffffff;
+            padding: 10px 45px;
+            font-size: 20px;
+            border: 2px solid #ffffff;
+            border-radius: 30px;
+        }
+
+        .forkNav .getinTouchBtn button:hover {
+            /* background-color: #ff8a35; */
+            background-image: linear-gradient(45deg, #9d4301, #ff8a35);
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        .modal-backdrop.show {
+            opacity: .8 !important;
+        }
+
+        .forkNav .modal-content {
+            background-color: #ff8a35;
+            background-image: linear-gradient(47deg, #ffffffe8, #ffffff), url('/static/assets/images/fork_images/formbg.jpg');
+            color: #000000;
+        }
+
+        .forkNav .modal-title {
+            font-size: 2em;
+        }
+
+        /* .forkNav .btn-close{
+            filter: invert(1) brightness(1) contrast(1);
+        } */
+
+        .forkNav .submitforkBtn {
+            background-image: linear-gradient(180deg, #ff6b00b8, #ff6c00), url('/static/images/formbg.jpg');
+            background-size: cover;
+            color: #ffffff;
+            padding: 5px 45px;
+            font-size: 20px;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        .forkNav .submitforkBtn:hover {
+            background-image: linear-gradient(180deg, #ff6c00, #ff6b00b8), url('./images/formbg.jpg');
+        }
+
+        .forkNav .form-control {
+            background-color: #ffffff;
+            color: #ab4800;
+            border: 1px solid #ff8a35;
+        }
+
+        .forkNav .form-select {
+            background-color: #ffffff;
+            color: #ab4800;
+        }
+
+        .forkFormDiv {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .cryptoForkServiceDiv {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .cryptoForkServiceDiv input {
+            background: #ff8a35;
+            padding: 2px 15px;
+            border-radius: 3px;
+            box-shadow: 0px 0px 11px 1px #ff8a35;
+            margin: 5px auto;
+            width: fit-content;
+			border-color: #ff8a35;
+			border: inherit !important;
+        }
+
+        .forkNav .modal.show .modal-dialog {
+            max-width: 700px;
+        }
+        .modal{
+            background: #0000007d;
+        }
+
+        .navbar .nav-item:not(:last-child) {
+                margin-right: 35px;
+              }
+               
+              .dropdown-toggle::after {
+                 transition: transform 0.15s linear; 
+              }
+               
+              .show.dropdown .dropdown-toggle::after {
+                transform: translateY(3px);
+              }
+           
+    </style>
+
+
+
+<body>
+    <section class="forkSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Fork Navigation -->
+                    <div class="forkNav mt-5">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        {% for i in get_list_of_fork  %}
+                           
+                              
+                            
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="NFT_Fork-tab" data-bs-toggle="tab"
+                                    data-bs-target="#NFT_Fork" type="button" role="tab" aria-controls="NFT_Fork"
+                                    aria-selected="true"><a href="https://infograins.com/forks/{{i.slug}}">{{i.name}}</a></button>
+                                    
+                            </li>
+
+                        {% endfor %}
+                      
+                            
+                        </ul> 
+
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="NFT_Fork" role="tabpanel"
+                                aria-labelledby="NFT_Fork-tab">
+                                <section class="NFT_ForkSection">
+                                    <div class="container-fluid">
+                                        <div class="row justify-content-center">
+                                            {% for j in fork %}
+
+                                            <div class="col-lg-2 col-md-3 col-12">
+                                                <div class="my-4 innerBxs">
+                                                    <input class="form-check-input serviceInputBox mt-0" type="checkbox"
+                                                            
+                                                        forkCount="0" value="{{j.fork_name}}"
+                                                        aria-label="Checkbox for following text input">
+                                                    <img src= {{j.fork_img.url}}
+                                                        class="img-fluid" alt="" srcset="">
+                                                    <h6>{{j.fork_name}}</h6>
+                                                </div>
+                                            </div> 
+                                          
+                                            {% endfor %}
+                                               
+
+                                            
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                           
+                            
+                        </div>
+                        <div class="forkFormDiv">
+                            <div class="getinTouchBtn my-4">
+                                <button onclick="checkForkError()" class="getInTouch" >Get
+                                    In Touch</button>
+                                <button style="display: none;" class="forkFormModalBtn" data-bs-toggle="modal"
+                                    data-bs-target="#getInTouchFork">Get
+                                    In Touch</button>
+                            </div>
+                            <div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="getInTouchFork" tabindex="-1"
+                                    aria-labelledby="getInTouchForkLabel" aria-hidden="false" data-bs-backdrop="false" data-bs-keyboard="false">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="getInTouchForkLabel">Get
+                                                    Free Demo</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close" onclick="removeFork()"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <section>
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div>
+                                                                    <form class="row g-3 needs-validation" action="" method="POST"
+                                                                         onsubmit="mySubmit(event)">
+                                                                        {% csrf_token %}
+                                                                        <div class="col-md-12">
+                                                                            <label for="validationCustom01"
+                                                                                class="form-label">Your name</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="validationCustom01" name='name'
+                                                                                required>
+                                                                            
+                                                                        </div>
+
+                                                                        <div class="col-md-12">
+                                                                            <label for="validationCustom02"
+                                                                                class="form-label">Your email</label>
+                                                                            <input type="email" class="form-control"
+                                                                                id="validationCustom02" name="email"
+                                                                                required>
+                                                                             <p id="usercheckemail" style="color: red;">**Email Address is missing</p>
+                                                                        </div>
+
+                                                                        <div class="col-md-12">
+                                                                            <label for="validationCustomUsername"
+                                                                                class="form-label">Mobile Number</label>
+                                                                            <div class="input-group has-validation">
+                                                                                <input type="number"
+                                                                                    class="form-control"
+                                                                                    id="validationCustomUsername"
+                                                                                    aria-describedby="inputGroupPrepend"
+                                                                                    name="phone" required>
+                                                                               
+                                                                        </div>
+
+                                                                   <div class="col-md-12"><label
+                                                                                for="validationCustom03"
+                                                                                class="form-label">Skype ID</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="validationCustom03" name="skype_id">
+                                                                          
+
+                                                                        <div class="col-md-12">
+                                                                            <label for="validationCustom04"
+                                                                                class="form-label">Select
+                                                                                Country</label>
+                                                                            <select
+                                                                                class="form-select selectCountryFork"
+                                                                                id="validationCustom04" name="country"
+                                                                                required style="margin-bottom:10px">
+                                                                                <!-- <option selected disabled value="">
+                                                                                    Choose...</option>
+                                                                                <option>...</option> -->
+                                                                            </select>
+                                                                            
+                                                                        </div>
+
+                                                                        <div class="col-md-12">
+                                                                            <div class="cryptoForkServiceDiv"></div>
+                                                                        </div>
+
+                                                                        <div class="col-md-12">
+                                                                            <!-- <label for="validationCustom05"
+                                                                                class="form-label">Your Message</label> -->
+                                                                            <div class="form-floating">
+                                                                                <textarea class="form-control"
+                                                                                    placeholder="Leave a comment here"
+                                                                                    id="floatingTextarea2" name="msg"
+                                                                                    style="height: 100px"></textarea>
+                                                                                <label for="floatingTextarea2">Your
+                                                                                    Message</label>
+                                                                            </div>
+                                                                           
+                                                                        </div>
+                                                                        <!-- <div class="col-12">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input"
+                                                                                    type="checkbox" value=""
+                                                                                    id="invalidCheck" required>
+                                                                                <label class="form-check-label"
+                                                                                    for="invalidCheck">
+                                                                                    Agree to terms and conditions
+                                                                                </label>
+                                                                                <div class="invalid-feedback">
+                                                                                    You must agree before
+                                                                                    submitting.
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> -->
+                                                                        {% comment %} <div class="col-12" style="text-align:center"> {% endcomment %}
+                                                                            <button class="submitforkBtn" type="submit">Submit</button>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button style="display: none;" class="forkErrorModalBtn" data-bs-toggle="modal"
+                                    data-bs-target="#forkformError">Error</button>
+                            </div>
+                            <div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="forkformError" tabindex="-1"
+                                    aria-labelledby="forkformErrorLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <!-- <h5 class="modal-title" id="forkformErrorLabel">Get
+                                                    Free Demo</h5> -->
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <section class="text-center">
+                                                    <span><i style="color: #ff5f5f; font-size: 2rem;"
+                                                            class="fas fa-info-circle"></i></span>
+                                                    <h1 style="color: #646464;font-size: 2rem;margin-top: 15px;">Please
+                                                        Select Atleast One</h1>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button style="display: none;" class="forkSuccessModalBtn" data-bs-toggle="modal"
+                                    data-bs-target="#forkformSuccess">Successfully</button>
+                            </div>
+                            <div>
+                                                                <!-- Modal -->
+                                <div class="modal fade" id="forkformSuccess" tabindex="-1"
+                                    aria-labelledby="forkformSuccessLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" style="background-color: #000000b0;">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <!-- <h5 class="modal-title" id="forkformErrorLabel">Get
+                                                    Free Demo</h5> -->
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <section class="text-center">
+                                                    <span>
+                                                        <i style="color: #00c706; font-size: 3rem;" class="fas fa-check-circle"></i>
+                                                    </span>
+                                                    <h1 style="color: #646464;font-size: 2rem;margin-top: 15px;">Successfully submitted</h1>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function checkForkError() {
+            const check = document.getElementsByClassName('serviceInputBox');
+            var a = 0
+            for (let i = 0; i < check.length; i++) {
+
+                if (check[i].checked == true) {
+                    a += 1;
+                    console.log(check[i])
+                    console.log("if");
+                } else {
+                    a += 0;
+                }
+            }
+            if (a > 0) {
+                document.getElementsByClassName('forkFormModalBtn')[0].click()
+            }
+            else {
+                document.getElementsByClassName('forkErrorModalBtn')[0].click()
+            }
+        }
+        // ====================================================== SELECT COUNTRY ==================================================== 
+        // const check = document.getElementsByClassName('serviceInputBox');
+        // let serviceDiv = document.getElementsByClassName('cryptoForkServiceDiv')[0];
+        //   for (let i = 0; i < check.length; i++) {
+        //     check[i].addEventListener('click', (e) => {
+        //         const inputCheck = e.target.checked;
+        //         const inputValue = e.target.value;
+        //         if (inputCheck === true) {
+        //             serviceDiv.innerHTML += `<input type="text" value= ${inputValue} name="getfork[]" readonly>`;
+        //         } else {
+        //             let servicesTag = document.getElementsByClassName('innerVal');
+        //             for (let i = 0; i < servicesTag.length; i++) {
+        //                 if (inputValue === servicesTag[i].attributes.services.nodeValue) {
+        //                     servicesTag[i].remove();
+        //                 } else {
+        //                     console.log("not remove tag");
+        //                 }
+        //             } 
+        //         }
+        //     })
+        // }   
+
+        // ====================================================== SELECT COUNTRY ==================================================== 
+        const countryList = [
+            "Afghanistan",
+            "Åland Islands",
+            "Albania",
+            "Algeria",
+            "American Samoa",
+            "Andorra",
+            "Angola",
+            "Anguilla",
+            "Antarctica",
+            "Antigua and Barbuda",
+            "Argentina",
+            "Armenia",
+            "Aruba",
+            "Australia",
+            "Austria",
+            "Azerbaijan",
+            "Bahamas",
+            "Bahrain",
+            "Bangladesh",
+            "Barbados",
+            "Belarus",
+            "Belgium",
+            "Belize",
+            "Benin",
+            "Bermuda",
+            "Bhutan",
+            "Bolivia (Plurinational State of)",
+            "Bonaire, Sint Eustatius and Saba",
+            "Bosnia and Herzegovina",
+            "Botswana",
+            "Bouvet Island",
+            "Brazil",
+            "British Indian Ocean Territory",
+            "Brunei Darussalam",
+            "Bulgaria",
+            "Burkina Faso",
+            "Burundi",
+            "Cabo Verde",
+            "Cambodia",
+            "Cameroon",
+            "Canada",
+            "Cayman Islands",
+            "Central African Republic",
+            "Chad",
+            "Chile",
+            "China",
+            "Christmas Island",
+            "Cocos (Keeling) Islands",
+            "Colombia",
+            "Comoros",
+            "Congo (the Democratic Republic of the)",
+            "Congo",
+            "Cook Islands",
+            "Costa Rica",
+            "Croatia",
+            "Cuba",
+            "Curaçao",
+            "Cyprus",
+            "Czechia",
+            "Côte d'Ivoire",
+            "Denmark",
+            "Djibouti",
+            "Dominica",
+            "Dominican Republic",
+            "Ecuador",
+            "Egypt",
+            "El Salvador",
+            "Equatorial Guinea",
+            "Eritrea",
+            "Estonia",
+            "Eswatini",
+            "Ethiopia",
+            "Falkland Islands ",
+            "Faroe Islands",
+            "Fiji",
+            "Finland",
+            "France",
+            "French Guiana",
+            "French Polynesia",
+            "French Southern Territories",
+            "Gabon",
+            "Gambia",
+            "Georgia",
+            "Germany",
+            "Ghana",
+            "Gibraltar",
+            "Greece",
+            "Greenland",
+            "Grenada",
+            "Guadeloupe",
+            "Guam",
+            "Guatemala",
+            "Guernsey",
+            "Guinea",
+            "Guinea-Bissau",
+            "Guyana",
+            "Haiti",
+            "Heard Island and McDonald Islands",
+            "Holy See",
+            "Honduras",
+            "Hong Kong",
+            "Hungary",
+            "Iceland",
+            "India",
+            "Indonesia",
+            "Iran",
+            "Iraq",
+            "Ireland",
+            "Isle of Man",
+            "Israel",
+            "Italy",
+            "Jamaica",
+            "Japan",
+            "Jersey",
+            "Jordan",
+            "Kazakhstan",
+            "Kenya",
+            "Kiribati",
+            "Korea",
+            "Korea",
+            "Kuwait",
+            "Kyrgyzstan",
+            "Lao People's Democratic Republic",
+            "Latvia",
+            "Lebanon",
+            "Lesotho",
+            "Liberia",
+            "Libya",
+            "Liechtenstein",
+            "Lithuania",
+            "Luxembourg",
+            "Macao",
+            "Madagascar",
+            "Malawi",
+            "Malaysia",
+            "Maldives",
+            "Mali",
+            "Malta",
+            "Marshall Islands",
+            "Martinique",
+            "Mauritania",
+            "Mauritius",
+            "Mayotte",
+            "Mexico",
+            "Micronesia",
+            "Moldova",
+            "Monaco",
+            "Mongolia",
+            "Montenegro",
+            "Montserrat",
+            "Morocco",
+            "Mozambique",
+            "Myanmar",
+            "Namibia",
+            "Nauru",
+            "Nepal",
+            "Netherlands",
+            "New Caledonia",
+            "New Zealand",
+            "Nicaragua",
+            "Niger",
+            "Nigeria",
+            "Niue",
+            "Norfolk Island",
+            "Northern Mariana Islands",
+            "Norway",
+            "Oman",
+            "Pakistan",
+            "Palau",
+            "Palestine, State of",
+            "Panama",
+            "Papua New Guinea",
+            "Paraguay",
+            "Peru",
+            "Philippines",
+            "Pitcairn",
+            "Poland",
+            "Portugal",
+            "Puerto Rico",
+            "Qatar",
+            "Republic of North Macedonia",
+            "Romania",
+            "Russian Federation",
+            "Rwanda",
+            "Réunion",
+            "Saint Barthélemy",
+            "Saint Helena, Ascension and Tristan da Cunha",
+            "Saint Kitts and Nevis",
+            "Saint Lucia",
+            "Saint Martin",
+            "Saint Pierre and Miquelon",
+            "Saint Vincent and the Grenadines",
+            "Samoa",
+            "San Marino",
+            "Sao Tome and Principe",
+            "Saudi Arabia",
+            "Senegal",
+            "Serbia",
+            "Seychelles",
+            "Sierra Leone",
+            "Singapore",
+            "Sint Maarten",
+            "Slovakia",
+            "Slovenia",
+            "Solomon Islands",
+            "Somalia",
+            "South Africa",
+            "South Georgia and the South Sandwich Islands",
+            "South Sudan",
+            "Spain",
+            "Sri Lanka",
+            "Sudan",
+            "Suriname",
+            "Svalbard and Jan Mayen",
+            "Sweden",
+            "Switzerland",
+            "Syrian Arab Republic",
+            "Taiwan",
+            "Tajikistan",
+            "Tanzania, United Republic of",
+            "Thailand",
+            "Timor-Leste",
+            "Togo",
+            "Tokelau",
+            "Tonga",
+            "Trinidad and Tobago",
+            "Tunisia",
+            "Turkey",
+            "Turkmenistan",
+            "Turks and Caicos Islands",
+            "Tuvalu",
+            "Uganda",
+            "Ukraine",
+            "United Arab Emirates",
+            "United Kingdom of Great Britain and Northern Ireland",
+            "United States Minor Outlying Islands",
+            "United States of America",
+            "Uruguay",
+            "Uzbekistan",
+            "Vanuatu",
+            "Venezuela",
+            "Viet Nam",
+            "Virgin Islands",
+            "Virgin Islands",
+            "Wallis and Futuna",
+            "Western Sahara",
+            "Yemen",
+            "Zambia",
+            "Zimbabwe"
+        ];
+
+        const selectTag = document.getElementsByClassName('selectCountryFork')[0];
+        countryList.map((e) => {
+            selectTag.innerHTML += `<option>${e}</option>`;
+        })
+
+    </script>
+
+
+    <script>
+
+        function removeFork(){
+            $(".cryptoForkServiceDiv").html("");
+        }
+
+    </script>
+
+    <script>
+
+        $(".serviceInputBox ").each(function(){
+            const getListOfFork = [];
+            if (this.checked == true){
+                getListOfFork.push(this.value);
+            }
+
+            console.log("getListOfFork",getListOfFork);
+        })
+
+    </script>
+
+
+    <script>
+
+        $(".getInTouch").click(function(){
+            $(".serviceInputBox").each(function(index){
+        let serviceDiv = document.getElementsByClassName('cryptoForkServiceDiv')[0];
+                if (this.checked == true){
+                    var a = $(this).val()
+                    serviceDiv.innerHTML += `<input type="text" value="${a}" name="getfork[]" readonly>`;
+                    console.log("$(this).val()",a)
+                }
+                
+            })
+       
+        })
+    </script>
+
+    <script>
+
+     $("#usercheckemail").hide();
+        // let emailAddressError = true; ///c///
+        $("#validationCustom02").keyup(function () {
+            let get_email = $("#validationCustom02").val()
+            // validateEmail(get_email); ///c///
+            if (get_email.length < 1) {
+                $("#usercheckemail").show();
+                $("#usercheckemail").html("**Email Address is missing");
+            }
+            else {
+                $("#usercheckemail").hide();
+                IsEmail($("#validationCustom02").val())
+            }
+        });
+        function IsEmail(email) {
+            var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!regex.test(email)) {
+                $("#usercheckemail").show()
+                $("#usercheckemail").html("Email address is not valid")
+            } else {
+                $("#usercheckemail").hide();
+            }
+        }
+
+        function mySubmit(event){
+            console.log("event")
+            let name = document.getElementById('validationCustom01').value;
+            let email = document.getElementById('validationCustom02').value;
+            console.log("name", name)
+            console.log("email", email)
+            if(name == '' && email == ''){
+                event.preventDefault()
+            }else{
+                document.getElementsByClassName('forkSuccessModalBtn')[0].click()
+                console.log("submitted")
+            }
+        }
+    </script>
+
+    <script>
+    const getListFork = [];
+    $(".getInTouch").click(function(){
+        $(".serviceInputBox").each(function(){
+                if (this.checked == true){
+                getListFork.push(this.value);
+            }
+            console.log("getListFork", getListFork);
+        })
+        
+
+    })
+        
+</script>
+
+
+
+</body>
+
+{% endblock fork %}

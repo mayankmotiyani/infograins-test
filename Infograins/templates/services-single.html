@@ -1,0 +1,73 @@
+
+{% extends 'base.html' %}
+{% block blockchain %}
+    
+    <!-- inner page banner start here -->
+    {% if Single_service_data %}
+     <!-- <section class="banner_section">
+        <div class="banner_img">
+            <img src="{{Single_service_data.service_img.url}}" alt="" class="img-fluid">
+        </div>
+        <div class="container">
+            <div class="banner_txt">
+                <h2 class="mb-0">{{ Single_service_data.service_title }}</h2>
+            </div>
+        </div>
+    </section>  -->
+    <!-- <section class="service_section">
+        <div class="service_image">
+            <img src="{{Single_service_data.service_img.url}}" alt="" class="img-fluid">
+            <h2 class="mb-0">{{ Single_service_data.service_title }}</h2>
+          </div>
+    </section> -->
+    <section>
+        <div class="page_banner service_bg">
+            <h2 class="page_heading text-center">{{ Single_service_data.service_title }}</h2>
+        </div>
+    </section>
+    <!-- inner page banner close here -->
+
+    <!-- product page content start here -->
+    <section class="service_categry_page">
+        <div class="container">
+            <div class="srv_categry_content">
+                {{ Single_service_data.service_para|safe }}
+                <!-- <p><span class="serv_color">Blockchain technology</span> is a structure that stores transactional
+                    records, also known as the block, of the public in several databases, known as the “chain,” in a
+                    network connected through peer-to-peer nodes. Typically, this storage is referred to as a ‘digital
+                    ledger.’</p>
+                <h5 class="serv_sub_hedng">Why Is Blockchain Popular ?</h5>
+                <p>Technologically, <span class="serv_color">Blockchain</span> is a digital ledger that is gaining a lot
+                    of attention and traction recently. But why has it become so popular? Well, let’s dig into it to
+                    fathom the whole concept.</p>
+                <p>Record keeping of data and transactions are a crucial part of the business. Often, this information
+                    is handled in house or passed through a third party like brokers, bankers, or lawyers increasing
+                    time, cost, or both on the business. Fortunately, Blockchain avoids this long process and
+                    facilitates the faster movement of the transaction, thereby saving both time and money.</p>
+                <P>Most people assume <span class="serv_color">Blockchain</span> and bitcoin can be used
+                    interchangeably, but in reality, that’s not the case. Blockchain is the technology capable of
+                    supporting various applications related to multiple industries like finance, supply chain,
+                    manufacturing, etc., but Bitcoin is a currency that relies on Blockchain technology to be secure.
+                </P>
+                <p>Blockchain is an emerging technology with many advantages in an increasingly digital world</p>
+                <h5 class="serv_sub_hedng">How Does Blockchain Technology Work ?</h5>
+                <p>Blockchain is a combination of three leading technologies:</p>
+                <ul class="list-unstyled">
+                    <li>Cryptographic keys</li>
+                    <li>A peer-to-peer network containing a shared ledger</li>
+                    <li>A means of computing, to store the transactions and records of the network</li>
+                </ul>
+                <p>Cryptography keys consist of two keys – Private key and Public key. These keys help in performing
+                    successful transactions between two parties. Each individual has these two keys, which they use to
+                    produce a secure digital identity reference. This secured identity is the most important aspect of
+                    Blockchain technology. In the world of cryptocurrency, this identity is referred to as ‘digital
+                    signature’ and is used for authorizing and controlling transactions.</p>
+                <p>At <span class="serv_color">Infograins Software Solutions</span> our expert developers have employed
+                    the latest object and functional possibilities offered by the latest Technology Blockchain and
+                    channelized them to suit our client needs the best. If the requirements occur</p> -->
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    <!-- product page content close here -->
+    {% endblock blockchain %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{single_services.service_title}}{% endblock title %}
+{% block servicesactivation %}active{%endblock servicesactivation %}
+{% block services %}
+<div class="img-fluid bg-gradient-dark w-100"
+	style="width: 100%; height: 25vh; background-position: center; background-repeat: no-repeat; background-size: cover; background-image: url('/static/images/resources.jpg');">
+</div>
+
+
+<section class="ftco-section ftco-degree-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 ftco-animate">
+				{% if Single_service_data %}
+				<h2 class="mb-3 font-weight-bolder ">{{ Single_service_data.service_title }}</h2>
+				<p>{{ Single_service_data.service_para|safe }}</p>
+					{% endif %}
+			</div>
+			<div class="col-lg-4 mx-auto my-lg-0 my-sm-4 ftco-animate">
+				<h3 class="text-lg-center">Our more services</h3>
+				{% for i in recentservices %}
+				<div class="card mb-3 ml-auto my-4 shadow" style="width: auto; min-height: auto;">
+					<div class="row">
+						<div class="col-12">
+							<div class="card-body">
+								<a href="{% url 'services' %}{{i.id}} ">
+									<h6 class="card-title text-center ">{{i.service_title|slice:":40"}} <span
+											class="font-weight-light text-danger" style="font-size: .7em;">&nbsp;
+											(...more) </span></h6>
+								</a>
+								<p class="card-text"><small class="text-muted">{{i.product_date}}</small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock services %}

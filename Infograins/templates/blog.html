@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block blogactivation %}active{%endblock blogactivation %}
+{% block title %}Infograins |  Blogs {% endblock title %}
+
+{% block blog %}
+    <!-- inner page banner start here -->
+    <section class="banner_section">
+        <div class="banner_img">
+            <img src="/static/assets/images/inner_banner.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="container">
+            <div class="banner_txt">
+                <h2 class="mb-0">Blog</h2>
+            </div>
+        </div>
+    </section>
+    <!-- inner page banner close here -->
+
+    <!-- Blog section start here -->
+    <section class="blog_page_section my-5">
+        <div class="container">
+            <div class="row">
+                {% for i in users %}
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <div class="blog_box">
+                        <div class="blog_img">
+                            <img src="{{i.blog_image.url}}" alt="" class="img-fluid">
+                        </div>
+                        <div class="blog_content">
+                            <a href="javascript:;" class="blog_date">{{i.blog_date}}</a>
+                            <a href="{% url 'blog' %}{{i.blog_slug}}" class="blog_heading">{{i.blog_title|slice:":40"}}<span class="font-weight-light text-danger"
+                                style="font-size: .7em;">&nbsp; (...more) </span></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class=" container justify-content-center d-flex ">
+        <nav aria-label="Page navigation example">
+            {% if users.has_other_pages %}
+            <ul class="pagination shadow-sm bg-none">
+              {% if users.has_previous %}
+              <li class="page-item "><a class="page-link text-warning border-0 font-weight-bolder" tabindex="-1" aria-disabled="true"
+                  href="?page={{ users.previous_page_number }}">Previous</a></li>
+              {% else %}
+              <li class="page-item disabled"><a class="page-link text-dark">  <span>Previous</span></a></li>
+              {% endif %}
+              {% for i in users.paginator.page_range %}
+              {% if users.number == i %}
+              <li class="page-item active border-0"><a class="page-link text-white bg-warning border-0 shadow font-weight-bolder ">  <span>{{ i }} <span class="sr-only">(current)</span></span></a></li>
+              {% else %}
+              <li class="page-item "><a class="page-link text-dark border-0 shadow font-weight-bolder" href="?page={{ i }}">{{ i }}</a></li>
+              {% endif %}
+              {% endfor %}
+              {% if users.has_next %}
+              <li class="page-item "><a class="page-link text-warning border-0 font-weight-bolder" href="?page={{ users.next_page_number }}">Next</a></li>
+              {% else %}
+              <li class="page-item disabled"><a class="page-link text-dark" > <span>Next</span></a></li>
+              {% endif %}
+            </ul>
+            {% endif %}
+          </nav>
+        </div>
+    </section>
+    <!-- Blog section close here -->
+    {% endblock blog %}

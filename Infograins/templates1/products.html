@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Products{% endblock title %}
+{% block productsactivation %}active{%endblock productsactivation %}
+{% block products %}
+<div class="img-fluid bg-gradient-dark w-100"
+  style="width: 100%; height: 30vh; background-position: center; background-repeat: no-repeat; background-size: cover; background-image: url('/static/images/resources.jpg');">
+</div>
+<div class="container my-5">
+  <div class="row">
+    {% for pro in productsitems %}
+    <div class="col-md-4 my-2">
+      <h1 class="text-left font-weight-bold" style="font-size: 22px; color: orange;">{{pro.0.0.product_category}}</h1>
+      {% for i in pro.0 %}
+      <a href="{% url 'products' %}{{i.id}}"><div class="p-1 text-left btn btn-outline-warning border-0 d-block w-100 text-dark font-weight-bold" style="font-size: 15px;">{{i.product_title}}</div></a>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock products %}

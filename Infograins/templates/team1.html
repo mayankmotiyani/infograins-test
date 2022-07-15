@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title %}Infograins | Team {% endblock title %}
+{% block team %}
+    
+    <section class="testimonials_section">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="blockchain_heading text-center">
+                    <h3 class="block_pg_heading">Meet the Team
+                        <span class="block_pg_desig"></span>
+                    </h3>
+                </div>
+<!-- ================================================================== Founders static data================================================================= -->
+
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                    <div class="team_section">
+                        <img src="/static/assets/images/Ajaysir.jpg" alt="Avatar" class="image">
+                        <div class="overlay">
+                            <h3 class="test_person">Ajay Shukla</h3>
+                            <h6 class="test_profl">Founder</h6>
+                            <p class="test_desc">Founder of Infograins Software Solutions PVT. LTD. and Technology Consultant - Blockchain and Distributed Infrastructure</p>
+                        </div>
+                      </div>
+                </div>
+
+             
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                    <div class="team_section">
+                        <img src="/static/assets/images/vipinsir.png" alt="Avatar" class="image">
+                        <div class="overlay">
+                            <h3 class="test_person">Vipin Shukla</h3>
+                            <h6 class="test_profl">Co-Founder & Director</h6>
+                            <p class="test_desc">Co-Founder & Director at Infograins with 8 years of experience.</p>
+                        </div>
+                      </div>
+                </div>
+                  
+               
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                    <div class="team_section">
+                        <img src="/static/assets/images/manoj_sir.jpg" alt="Avatar" class="image">
+                        <div class="overlay">
+                            <h3 class="test_person">Manoj Shukla</h3>
+                            <h6 class="test_profl">Sr. Business Analyst/Blockchain Consultant</h6>
+                            <p class="test_desc">Business Analyst/Blockchain Consultant with 6 years of experience.</p>
+                        </div>
+                      </div>
+                </div>
+
+
+               
+<!-- ==================================================================Founders static data================================================================= -->
+               
+               
+                {% for i in team  %}
+                  
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                    <div class="team_section">
+                        <img src={{i.image.url}} alt="Avatar" class="image">
+                        <div class="overlay">
+                            <h3 class="test_person">{{i.name}}</h3>
+                            <h6 class="test_profl">{{i.designation}}</h6>
+                            <p class="test_desc">{{i.description}}</p>
+                        </div>
+                      </div>
+                </div>
+                {% endfor %}
+                
+              
+            </div>
+        </div>
+    </section>
+   
+    {% endblock team %}

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block blockchainactivation %}active{% endblock blockchainactivation %}
+{% if single_block_chain_service %}
+{% block title %}{{single_block_chain_service.service_title}} | Infograins{% endblock title %}
+{% endif %}
+{% block metadescription %}
+{% if stag %}
+<meta name="description" content= "{{stag}}">
+{% endif %}
+
+{% endblock metadescription %}
+{% block blockchain %}
+    <!-- inner page banner start here -->
+    <section class="banner_section">
+        <div class="banner_img">
+            <img src="/static/assets/images/inner_banner.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="container">
+            <div class="banner_txt">
+                <h2 class="mb-0">Blockchain Service</h2>
+            </div>
+        </div>
+    </section>
+    <!-- inner page banner close here -->
+
+    <!-- service section start here -->
+    <section class="blockchn_page_section my-5">
+        <div class="container">
+            <div class="blckchn_content">
+                <div class="d-flex align-items-start">
+                    <div class="nav flex-column blckchn_menu nav-pills me-3" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        {% for i in block_chain_service %}
+                            {% if i.service_title == single_block_chain_service.service_title %}
+                            <a href="{% url 'blockchain_service' %}{{i.service_slug}}" class="anchorActive"> {{i.service_title}}</a>
+                            {% else %}
+                            <a href="{% url 'blockchain_service' %}{{i.service_slug}}" class="text-dark anchoreNotActive">{{i.service_title}}</a>
+                            {% endif %}
+                        {% endfor %}
+                       
+                    </div>
+                    <div class="tab-content blckchn_cntnt" id="v-pills-tabContent">
+                        {% if single_block_chain_service %}
+                        <div class="tab-pane fade show active" id="public_blockchain" role="tabpanel"
+                            aria-labelledby="public_blockchain-tab">
+                            <div class="blockchain_box_content">
+                                <div class="blockchain_heading">
+                                    <h3 class="block_pg_heading">{{single_block_chain_service.service_title}}
+                                        <span class="block_pg_desig"></span>
+                                    </h3>
+                                </div>
+                                <div class="blockchain_txt">
+                                    <p>{{single_block_chain_service.service_para|safe}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service section start here -->
+    {% endblock blockchain %}

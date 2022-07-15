@@ -1,0 +1,1032 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block metadescription %} {% endblock metadescription %}
+      
+   
+    {% block metapb %}{% endblock metapb %}
+
+    
+
+    <title>{% block title %}{% endblock title %}</title>
+    <meta name="google-site-verification" content="Qh8ChBUBC7XBqGZ2MaLHnKxzS_I8mzrwIjr_P3bMRkA" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="/static/assets/images/fav.png" />
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="{% static '/assets/css/bootstrap.min.css' %}">
+    
+    <!-- font awesome icon -->
+    <link rel="stylesheet" href="/static/assets/css/all.css">
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+
+    <!-- Bootstrap JS file  -->
+    <script src="/static/assets/js/jquery.min.js"></script>
+    
+    <script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/js/all.min.js"></script>
+    <!-- owl slider  -->
+
+    <script src="/static/assets/js/jquery-1.12.0.min.js"></script>
+    <!-- <script src="/static/js/owl.carousel.js"></script> -->
+   
+
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/assets/css/floating-wpp.css">
+    <script type="text/javascript" src="/static/assets/js/floating-wpp.js"></script>
+
+    <link rel="stylesheet" href="/static/assets/css/intlTelInput.css">
+    <script type="text/javascript" src="/static/assets/js/intlTelInput.js"></script>
+
+    <link rel="stylesheet" href="/static/assets/css/aos.css">
+    <script type="text/javascript" src="/static/assets/js/aos.js"></script>
+
+    <link rel="stylesheet" href="/static/assets/css/jquery.convform.css">
+    <script type="text/javascript" src="/static/assets/js/jquery.convform.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    {% block company_scripts %}
+    {% endblock company_scripts %}
+    
+         <style>
+            .Successfully_popup {
+                text-align: center;
+            }
+    
+            .success_icon svg {
+                color: rgb(3, 150, 3);
+                font-size: 40px;
+            }
+           
+            .highlightTxt span b{
+                background: linear-gradient(68deg, #b400ff 3%, #0f999c 36%, #dba300 77%, #ff8800);
+                background-size: 400% 400%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: blink 2s ease infinite;
+            }
+
+            .foot_content h5 {
+                font-size: 18px;
+                margin-top: 30px;
+            }
+    
+            @keyframes blink {
+                0% {
+                    background-position: 0% 50%;
+                    transform: scale(0);
+                }
+    
+                50% {
+                    background-position: 100% 50%;
+                }
+    
+                100% {
+                    background-position: 0% 50%;
+                    transform: scale(1);
+                }
+            }
+    
+            @media screen and (max-width:768px){
+                .franchise_TXT{
+                    font-size: .91em;
+                }
+            }
+        </style>
+         <!-- ==================================dropdown=================================== -->
+         <style>
+
+            
+            .navbar .nav-item:not(:last-child) {
+                margin-right: 35px;
+              }
+               
+              .dropdown-toggle::after {
+                 transition: transform 0.15s linear; 
+              }
+               
+              .show.dropdown .dropdown-toggle::after {
+                transform: translateY(3px);
+              }
+           
+            </style>
+         <!-- =================================dropdown==================================== -->
+             <!-- =================================mega menu css start==================================== -->
+         <style>
+            nav{
+                padding-bottom: 0px !important;
+            }
+            .blockchain_mega:hover .mega_menu {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+    
+            .mega_menu {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                box-shadow: 0px 0px 10px 0px rgb(155 151 151) ;
+                background-color: #fff;
+                z-index: 99;
+                border-top: 1px solid #ef6e10;
+                display: none;
+                transition: all .5s ease 0s;
+            }
+    
+            .mega_menu ul {
+                margin-left: 20px !important;
+                padding: 20px 0px !important;
+            }
+            .mega_menu ul h5{
+                font-weight: 600;
+            }
+    
+            .mega_menu ul li {
+                list-style: none;
+                line-height: 3rem;
+                color: #5f5d5d;
+                font-size: 17px;
+                text-transform: capitalize;
+            }
+            .mega_menu ul li a{
+                color: #5f5d5d !important;
+            }
+            .mega_menu ul li a:hover {
+                color: #ef6e10 !important;
+                cursor: pointer;
+            }
+    
+            .mega_menu .logo_section {
+                /* background: #093576; */
+                background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url("https://cdn.wallpapersafari.com/7/9/S3MpoK.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 100%;
+                text-align: center;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .mega_menu .logo_section img {
+                width: 100px;
+            }
+            .products-mega:hover .products-menu {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .products-menu {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                box-shadow: 0px 0px 10px 0px rgb(201 195 195);
+                background-color: #fff;
+                z-index: 99;
+                border-top: 1px solid #ef6e10;
+                display: none;
+                transition: all .5s ease 0s;
+            }
+            .products-menu .products-images-content{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                align-content: center;
+                padding: 80px;
+                width: 80%;
+                margin: auto;
+            }
+            .products-menu .products-name a{
+                margin-top: 27px;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 17px;
+                color: #5f5d5d !important;
+            }
+            .products-menu .products-img img{
+                display: block;
+                margin: auto;
+            }
+            @media (min-width:1024px) and (max-width:1220px){
+                .products-menu .products-images-content{
+                    width: 100%;
+                }
+            }
+
+
+            .fork_mega:hover .fork_mega_menu {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .fork_mega_menu{
+                position: absolute;
+                right: 15%;
+                width: 16%;
+                box-shadow: 0px 0px 10px 0px rgb(201 195 195);
+                background-color: #fff;
+                z-index: 99;
+                border-top: 1px solid #ef6e10;
+                display: none;
+                transition: all .5s ease 0s;
+            }
+            .fork_mega_menu ul{
+                padding: 25px !important;
+            }
+            .fork_mega_menu ul li{
+                line-height: 2.2rem;
+            }
+            .fork_mega_menu ul li a{
+                color: #6a7071 !important;
+                height: auto !important;
+                padding: 0px !important;
+                font-weight: 500 !important;
+            }
+            .fork_mega_menu ul li a:hover {
+                color: #ef6e10 !important;
+                cursor: pointer;
+            }
+        </style>
+    <!-- =================================mega menu css end==================================== -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-63620321-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-63620321-3');
+</script>
+
+<script src="{% static '/assets/js/showMore.ie.min.js' %} "></script>     
+
+
+
+</head>
+
+<body>
+
+
+    <!-- navbar strat here -->
+    <header class="top_nav">
+        <div class="container-fluid">
+            <div class="row top_nav_box">
+				<div class="col-lg-8">
+					<div class="row">
+						<div class="col-lg-3 col-md-5">
+							<ul class="list-inline mb-0 top_left_nav">
+								<li class="list-inline-item ">
+									<a href="mailto:info@infograins.com" class="text-white"> <i class="far fa-envelope"></i> info@infograins.com</a>
+								</li>
+								
+								<li class="list-inline-item text-white pt-2 ps-3">Call Us :</li>
+							</ul>
+						</div>
+					
+						<div class="col-lg-9 col-md-7">
+							<marquee scrolldelay="90" scrollamount="8" onmouseover="stop()" onmouseout="start()">
+								<ul class="list-inline mb-0 top_left_nav">
+									<li class="list-inline-item">
+										<strong class="text-white">India</strong> : <a href="tel:9770477239"> <i class="fas fa-phone-alt"></i> +91 9770477239</a>  <a href="tel:9713406272">  +91 9713406272</a>,
+									</li>
+									<li class="list-inline-item">
+										<strong class="text-white">UK</strong> : <a href="tel:447401232155"> <i class="fas fa-phone-alt"></i> +447401232155</a>,
+									</li>
+									
+									<li class="list-inline-item">
+										<strong class="text-white">USA</strong> : <a href="tel:12025196167"> <i class="fas fa-phone-alt"></i> +12025196167</a>,
+									</li>
+									
+									<li class="list-inline-item">
+										<strong class="text-white">UAE</strong> : <a href="tel:971585596272"> <i class="fas fa-phone-alt"></i> +971585596272</a>,
+									</li>
+									
+									<li class="list-inline-item">
+										<strong class="text-white">Australia</strong> : <a href="tel:61480043472"> <i class="fas fa-phone-alt"></i> +61480043472</a>
+									</li>
+								</ul>
+							</marquee>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4">
+					<ul class="list-inline ms-auto mb-0 top_right_nav d-flex justify-content-end">
+						<li class="list-inline-item">
+							<a href="https://www.facebook.com/infograins/" target="_blank"><i
+									class="fab fa-facebook-f font_icon"></i></a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://www.instagram.com/infograins/" target="_blank"><i
+									class="fab fa-instagram font_icon"></i></a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://www.linkedin.com/company/infograin-software-solutions/" target="_blank"><i
+									class="fab fa-linkedin-in font_icon"></i></a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://twitter.com/infograinssoft?s=20" target="_blank"><i
+									class="fab fa-twitter font_icon"></i></a>
+						</li>
+						
+						<li class="list-inline-item">
+							<a href="https://join.skype.com/invite/NqBQ11qKBCxI" target="_blank"><i
+									class="fab fa-skype font_icon "></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+        </div>
+    </header>
+    <nav id="navbar_top" class="navbar navbar-expand-custom navbar-mainbg navbar-expand-lg navbar-fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand navbar-logo cmpny_logo" href="{% url 'company' %}">
+                <img src="/static/assets/images/logo.png" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars nav_icon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <!-- <div class="hori-selector">
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div> -->
+
+                    <li class="nav-item {% block companyactivation %}{%endblock companyactivation %}">
+                        <a rel="canonical" class="nav-link" href="{% url 'company' %}">
+                            <span> <b> Company </b> </span>
+                        </a>
+                    </li>
+                    {% comment %} <li class="nav-item   {% block servicesactivation %}{% endblock servicesactivation %}">
+                        <a rel="canonical" class="nav-link" href="{% url 'services' %}">
+                            <span> <b> Services </b> </span>
+                        </a>
+                    </li> {% endcomment %}
+                    <li class="nav-item {% block productactivation %}{% endblock productactivation %} products-mega">
+                        <a rel="canonical" class="nav-link" href="{% url 'products' %}">
+                            <span> <b> Products </b> </span>
+                        </a>
+                        <div class="products-menu">
+                            <div class="products-images-content">
+                                {% for pro in allProds %}
+                                <div class="products-div">
+                                    <div class="products-img">
+                                       <a href="{% url 'products' %}{{pro.product_slug}}"> <img src="{{pro.product_logo_image.url}}" alt="img" class="img-fluid" width="50px"></a>
+                                    </div>
+                                    <div class="products-name"><a href="{% url 'products' %}{{pro.product_slug}}">{{pro.productname}}</a></div>
+                                </div>
+                                {% endfor %}
+                               
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item {% block blockchainactivation %}{% endblock blockchainactivation %} blockchain_mega">
+                        <a rel="canonical" class="nav-link" href="{% url 'blockchain_service' %}">
+                            <span> <b> Blockchain </b> </span>
+                        </a>
+                        <div class="mega_menu ">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-4 px-0">
+                                        <div class="logo_section">
+                                            <img src="fav.png" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mega_content d-flex justify-content-center">
+                                            
+                                            <ul>
+                                                <h5>Blockchain</h5>
+                                                {% for i in blockchain_header %}
+                                                <li> <a href="{% url 'blockchain_service' %}{{i.service_slug}}" class=""> {{i.service_title}}</a></li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mega_content d-flex justify-content-center">
+                                            <ul>
+                                                <h5>NFT</h5>
+                                                {% for i in nft  %}
+
+                                                <li><a class="dropdown-item" href="{% url 'nft' i.slug %}">{{i.title}}</a></li>
+                                               
+                                             {% endfor %}
+                                               
+                                    
+                                            </ul>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+<!-- 
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span> <b> NFT</b> </span>
+                        </a>
+                        <div class="dropdown-menu nftDropdown" aria-labelledby="navbarDropdown1">
+                            {% for i in nft  %}
+
+                            <a class="dropdown-item" href="{% url 'nft' i.slug %}">{{i.title}}</a>
+                           
+                         {% endfor %}
+                        </div>
+                      </li>  -->
+                      {% comment %} <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span> <b> NFT</b> </span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                {% for i in nft  %}
+
+                                <a class="" href="{% url 'nft' i.slug %}">{{i.title}}</a>
+                               
+                             {% endfor %}
+                            </li>
+                        </ul>
+                      </li> {% endcomment %}
+
+                        <li class="nav-item {% block forkactivation %}{% endblock forkactivation %} fork_mega">
+                        <a rel="canonical" class="nav-link" href="">
+                            <span> <b style="padding:20px"> Fork </b> </span>
+                        </a>
+                        <div class="fork_mega_menu">
+                            <ul>
+                                <li><a href="#">NFT Fork</a></li>
+                                <li><a href="#">Defi Fork</a></li>
+                                <li><a href="#">Crypto Coin Fork</a></li>
+                                <li><a href="#">Crypto Token Fork</a></li>
+                                <li><a href="#">Blockchain Fork</a></li>
+                            </ul>
+                        </div>
+                    </li>    
+
+                    <li class="nav-item {% block resourceactivation %}{% endblock resourceactivation %}">
+                        <a rel="canonical" class="nav-link" href="{% url 'resources' %}">
+                            <span> <b> Resources </b> </span>
+                        </a>
+                    </li>
+                    <li class="nav-item {% block blogactivation %}{% endblock blogactivation %}">
+                        <a rel="canonical" href="{% url 'blog' %}" class="nav-link ">
+                            <span> <b> Blog </b> </span>
+                        </a>
+                    </li>
+
+                    
+
+
+
+
+                    <li class="nav-item {% block contactactivation %}{% endblock contactactivation %}">
+                        <a rel="canonical" href="{% url 'contact' %}" class="nav-link ">
+                            <span> <b> Contact Us </b> </span>
+                        </a>
+                    </li>
+
+                    {% comment %} <li class="nav-item" > 
+                        <a rel="canonical" href="{% url 'franchise' %}"  style="cursor: pointer;"  class="nav-link highlightTxt" >
+                            <span> <b> Apply for Franchise </b> </span>
+                         
+                        </a>
+                    </li> {% endcomment %}
+
+
+
+
+
+                    
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog' %}">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">
+                            Contact Us
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar close here -->
+   
+
+    {% block index %}
+    {% endblock index %}
+
+    {% block services %}
+    {% endblock services %}
+
+    {% block blockchain %}
+    {% endblock blockchain %}
+
+    {% block resources %}
+    {% endblock resources %}
+
+    {% block resource %}
+    {% endblock resource %}
+
+    {% block blog %}
+    {% endblock blog %}
+
+    {% block workflow %}
+    {% endblock workflow %}
+
+    {% block contact %}
+    {% endblock contact %}
+
+    {% block products %}
+    {% endblock products %}
+
+    {% block product %}
+    {% endblock product %}
+
+    {% block productmodule %}
+    {% endblock productmodule %}
+
+    {% block blog_single %}
+    {% endblock blog_single %}
+
+    {% block testimonials %}
+    {% endblock testimonials %}
+
+    {% block career %}
+    {% endblock career %}
+
+    {% block help %}
+    {% endblock help %}
+
+    {% block franchise %}
+    {% endblock franchise %}
+
+    {% block job %}
+    {% endblock job %}
+
+    {% block event %}
+    {% endblock event %}
+
+    {% block privacy %}
+    {% endblock privacy %}
+
+    {% block aboutus %}
+    {% endblock aboutus %}
+
+    {% block team %}
+    {% endblock team %}
+
+    {% block sitemap %}
+    {% endblock sitemap %}
+
+    {% block training %}
+    {% endblock training %}
+
+    {% block nft %}
+      
+    {% endblock nft %}
+
+    {% block fork %}
+      
+    {% endblock fork %}
+
+
+
+    <div id="wtsappmyButton"></div>
+
+
+    <!-- footer section start here -->
+    <div class="other_addrs d-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12 my-3">
+                    <div class="othr_adrs_info">
+                        <h4>INDIA OFFICE</h4>
+                        <ul class="list-unstyled">
+                             <li>407, Atulya IT Park, Bhawarkuan Main Rd, Indore, Madhya Pradesh 452010</li>
+                            <li><i class="fas fa-phone font_icon" style="color: #ef6e10;"></i><a href="tel:+447868678273">+91 9770477239 | +91 9713406272</a></li>
+                            <li><i class="far fa-envelope font_icon" style="color: #ef6e10;"></i><a href="mailto:uk@geeks4hire.com"> info@infograins.com | hr@infograins.com</a></li> 
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12 my-3">
+                    <div class="othr_adrs_info">
+                        <h4>UK OFFICE</h4>
+                        <ul class="list-unstyled">
+                             <li>25.20 A, Chapters, 9 Frying Pan Alley, London E1 7HS, United Kingdom</li>
+                            <li><i class="fas fa-phone font_icon" style="color: #ef6e10;"></i><a href="tel:+447401232155">+447401232155</a></li>
+                            <li><i class="far fa-envelope font_icon" style="color: #ef6e10;"></i><a href="mailto:uk@geeks4hire.com">uk@geeks4hire.com</a></li> 
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12 my-3">
+                    <div class="othr_adrs_info">
+                        <h4>USA OFFICE</h4>
+                        <ul class="list-unstyled">
+                            <li>135, 447 Broadway, 2nd Floor, New York, NY 10013, USA</li>
+                            <li><i class="fas fa-phone font_icon" style="color: #ef6e10;"></i><a href="tel:+12025196167">+12025196167</a></li>
+                            <li><i class="far fa-envelope font_icon" style="color: #ef6e10;"></i><a href="mailto:us@infograins.com">us@infograins.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12 my-3">
+                    <div class="othr_adrs_info">
+                        <h4>UAE OFFICE</h4>
+                        <ul class="list-unstyled">
+                            <li>FDRK3822 Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates</li>
+                            <li><i class="fas fa-phone font_icon" style="color: #ef6e10;"></i><a href="tel:+971585596272">+971585596272</a>
+                            </li>
+                          <li><i class="far fa-envelope font_icon" style="color: #ef6e10;"></i><a href="mailto:hk@infograins.com">hk@infograins.com</a></li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer_section">
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                    <div class="foot foot1">
+                        <div class="logo">
+                            <img src="/static/assets/images/info_logo_white.png" alt="logo" class="img-fluid" style="width: 200px; padding-top: 5px; padding-bottom: 25px;">
+                        </div>
+                        <!-- <h5 class="foot_heading">About Us</h5> -->
+                        <p>Development Center InfoGrains Software Solutions Pvt. Ltd.</p>
+                        <ul class="list-inline mt-2 mb-0 foot_social_media">
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/infograins/" target="_blank"><i
+                                        class="fab fa-facebook-f font_icon"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com/infograins/" target="_blank"><i
+                                        class="fab fa-instagram font_icon"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.linkedin.com/company/infograin-software-solutions/"
+                                    target="_blank"><i class="fab fa-linkedin-in font_icon"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com/infograinssoft?s=20" target="_blank"><i
+                                        class="fab fa-twitter font_icon"></i></a>
+                            </li>
+                           
+                            <li class="list-inline-item">
+                                <a href="https://join.skype.com/invite/NqBQ11qKBCxI" target="_blank"><i
+                                        class="fab fa-skype font_icon "></i></a>
+                            </li>
+                        </ul>
+                       
+                    </div>
+                    
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                    <div class="foot foot2">
+                        <h5 class="foot_heading">Services</h5>
+
+                        <ul class="list-unstyled">
+                            {% for i in services_list %}
+                            {% if i.0.0.service_category == "Web And CMS Development" %}
+                            {% for j in i.0 %}
+                            <li>
+                                <a href="{% url 'services' %}{{j.service_slug}}">{{j.service_title}}</a>
+                            </li>
+                            {% endfor %}
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                    <div class="foot foot3">
+                        <h5 class="foot_heading">Company</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a rel="canonical" href="{% url 'aboutus' %}">About us</a>
+                            </li>
+                            <li>
+                                <a rel="canonical" href="{% url 'team' %}">Our Team</a>
+                            </li>
+                            <li>
+                                <a rel="canonical" href="{% url 'career' %}">Careers</a>
+                            </li>
+                            <li>
+                                <a rel="canonical" href="{% url 'testimonial' %}">Testimonials</a>
+                            </li>
+                            <li>    
+                                <a rel="canonical" href="{% url 'sitemapss' %}">Sitemap</a>
+                            </li>
+                            <li>
+                                <a rel="canonical" href="{% url 'contact' %}">Contact Us</a>
+                            </li>
+                            <li>
+                                <a rel="canonical" href= "javascript:;" >Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a rel="canonical" href= "https://infograinstcs.com/" >IT Training Institute In Indore</a>
+                            </li>
+                            <li>
+                                <a rel="canonical" href="{% url 'help' %}">How can we help</a>
+                            </li>
+                            <li>
+                                <a rel="canonical" href="javascript:;">Events</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                    <div class="foot foot4">
+                        <h5 class="foot_heading">Hire Developers</h5>
+                        <ul class="list-unstyled">
+                            {% for i in services_list %}
+                            {% if i.0.0.service_category == "Hire Dedicated Developers" %}
+                            {% for j in i.0 %}
+                            <li>
+                                <a href="{% url 'services' %}{{j.service_slug}}">{{j.service_title}}</a>
+                            </li>
+                            {% endfor %}
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="foot_content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div>
+                                <h6>Development Center-InfoGrains Software Solutions Pvt. Ltd.</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <div>
+                                <h5 style="color:#ef6e10">INDIA OFFICE</h5>
+                                <ul class="list-unstyled">
+                                    <li class="foot_address" style="justify-content: center;"><i
+                                            class="fas fa-map-marker-alt font_icon"></i>
+                                        <p class="mb-0 ">407, Atulya IT Park, Bhawarkuan Main Rd, Indore, Madhya Pradesh 452010</p>
+                                    </li>
+                                    <li> <i class="fas fa-phone font_icon"></i> <a href="tel:9770477239">+91 9770477239</a> | <a
+                                            href="tel:9713406272">+91 9713406272</a> </li>
+                                    <li> <i class="far fa-envelope font_icon"></i> <a
+                                            href="mailto:info@infograins.com">info@infograins.com</a> | <a
+                                            href="mailto:hr@infograins.com">hr@infograins.com</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-12">
+                            <div>
+                                <h5 style="color:#ef6e10">UK OFFICE</h5>
+                                <ul class="list-unstyled">
+                                    <li class="foot_address" style="justify-content: center;"><i
+                                            class="fas fa-map-marker-alt font_icon"></i>
+                                        <p class="mb-0 ">Apartment 4105, 25 Arena Tower Crossharbour Plaza, London E14 9YF</p>
+                                    </li>
+                                    <li> <i class="fas fa-phone font_icon"></i> <a href="tel:+447401232155">+447401232155</a> </li>
+                                    {% comment %} <li><a href="mailto:uk@geeks4hire.com">uk@geeks4hire.com</a></li> {% endcomment %}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-12">
+                            <div>
+                                <h5 style="color:#ef6e10">USA OFFICE</h5>
+                                <ul class="list-unstyled">
+                                    <li class="foot_address" style="justify-content: center;"><i
+                                            class="fas fa-map-marker-alt font_icon"></i>
+                                        <p class="mb-0 ">135, 447 Broadway, 2nd Floor, New York, NY 10013, USA</p>
+                                    </li>
+                                    <li> <i class="fas fa-phone font_icon"></i> <a href="tel:+12025196167">+12025196167</a> </li>
+                                    <!-- <li> <i class="far fa-envelope font_icon"></i> <a
+                                            href="mailto:info@infograins.com">info@infograins.com</a> | <a
+                                            href="mailto:hr@infograins.com">hr@infograins.com</a> </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-12">
+                            <div>
+                                <h5 style="color:#ef6e10">AUSTRALIA OFFICE</h5>
+                                <ul class="list-unstyled">
+                                    <li class="foot_address" style="justify-content: center;"><i
+                                            class="fas fa-map-marker-alt font_icon"></i>
+                                        <p class="mb-0 ">264 George Street, Sydney 2000</p>
+                                    </li>
+                                    <li> <i class="fas fa-phone font_icon"></i> <a href="tel:+61480043472">+61480043472</a> </li>
+                                    {% comment %} <li><a href="mailto:uk@geeks4hire.com">uk@geeks4hire.com</a></li> {% endcomment %}
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <div>
+                                <h5 style="color:#ef6e10">UAE OFFICE</h5>
+                                <ul class="list-unstyled">
+                                    <li class="foot_address" style="justify-content: center;"><i
+                                            class="fas fa-map-marker-alt font_icon"></i>
+                                        <p class="mb-0 ">FDRK3822 Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates</p>
+                                    </li>
+                                    <li> <i class="fas fa-phone font_icon"></i> <a href="tel:+971585596272">+971585596272</a> </li>
+                                    <!-- <li> <i class="far fa-envelope font_icon"></i> <a
+                                            href="mailto:info@infograins.com">info@infograins.com</a> | <a
+                                            href="mailto:hr@infograins.com">hr@infograins.com</a> </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+               
+            </div>
+
+
+            <!-- <div class="position-absolute end-0 bottom-0" position-absolute>
+                <a href="https://www.designrush.com/agency/call-centers/answering-services">                   
+                     <img src="/static/assets/images/designrush.svg" class="img-fluid">
+                </a>
+            </div>
+
+            <div class="position-absolute end-10 bottom-0" position-absolute>
+                <a href="https://www.goodfirms.co/directory/services/list-blockchain-technology-companies">                   
+                     <img src="/static/assets/images/batch.png" class="img-fluid">
+                </a>
+            </div> -->
+
+
+        </div>
+        <script src="/static/assets/js/script.js"></script>
+        <a href="//www.dmca.com/Protection/Status.aspx?id=064d3eba-ec5d-411c-80de-5f48aa985d6e"
+            title="DMCA.com Protection Status" class="dmca-badge">
+            <img src="//images.dmca.com/Badges/DMCA_logo-grn-btn120w.png?ID=064d3eba-ec5d-411c-80de-5f48aa985d6e"
+                alt="DMCA.com Protection Status">
+        </a>
+        <script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+    </footer>
+    <!-- footer section close here -->
+
+
+
+
+    <!-- <script>
+        jQuery('.client-slider').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 2
+                }
+            }
+        });
+    </script> -->
+    
+
+    <script type="text/javascript">
+        $(function () {
+            $('#wtsappmyButton').floatingWhatsApp({
+                phone: '919770477239',
+                popupMessage: 'Hello, how can we help you?',
+                message: "Type your message here",
+                showPopup: true,
+                showOnIE: false,
+                headerTitle: 'Welcome!',
+                headerColor: '#25d366',
+                backgroundColor: '#25d366',
+                buttonImage: '<img src="/static/assets/images/whatsapp.svg" />'
+            });
+        });
+    </script>
+
+
+   <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/24994555.js"></script>
+  <!-- End of HubSpot Embed Code -->
+
+
+
+  <!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/24994555.js"></script> -->
+
+
+  
+  <script>
+    $(document).ready(function () {
+         
+        $("#exampleModal").addClass("show");
+        $("#exampleModal").css('display', 'block');
+        $("#exampleModal").css('background-color', '#00000075');
+        $("#exampleModal").click(function () {
+            $("#exampleModal").css('display', 'none');
+        })
+        setTimeout(function(){ test(); });
+    });
+</script>
+
+
+  <!--Start of Tawk.to Script-->
+ 
+ <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/620272809bd1f31184db89b9/1frcouhl9';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    console.log(s1);
+    })(); 
+    
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(".prodt_link").click(function(){
+            console.log($(this));
+        })
+    })
+</script>
+
+<!-- ===========================================dropdown========================================== -->
+<script>
+    // const $dropdown = $(".dropdown");
+    // const $dropdownToggle = $(".dropdown-toggle");
+    // const $dropdownMenu = $(".dropdown-menu");
+    // const showClass = "show";
+     
+    // $(window).on("load resize", function() {
+    //   if (this.matchMedia("(min-width: 768px)").matches) {
+    //     $dropdown.hover(
+    //       function() {
+    //         const $this = $(this);
+    //         $this.addClass(showClass);
+    //         $this.find($dropdownToggle).attr("aria-expanded", "true");
+    //         $this.find($dropdownMenu).addClass(showClass);
+    //       },
+    //       function() {
+    //         const $this = $(this);
+    //         $this.removeClass(showClass);
+    //         $this.find($dropdownToggle).attr("aria-expanded", "false");
+    //         $this.find($dropdownMenu).removeClass(showClass);
+    //       }
+    //     );
+    //   } else {
+    //     $dropdown.off("mouseenter mouseleave");
+    //   }
+    // });
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+crossorigin="anonymous"></script>
+
+
+<!-- ===========================================dropdown========================================== -->
+
+    <!--End of Tawk.to Script-->
+    
+</body>
+</html>

@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% block productmodule %}
+<style>
+    .product_module_section {
+        background: #121930;
+        color: #fff;
+        width: 100%;
+    }
+
+    .product_module_section .slice_product_content, .bharatnft_product_content {
+        width: 85%;
+        margin: 50px auto;
+    }
+
+    .slice_product_content h2, .bharatnft_product_content h2 {
+        font-size: 38px;
+        font-weight: 700;
+    }
+
+    .slice_product_content p, .bharatnft_product_content p {
+        font-weight: 500;
+        line-height: 1.6;
+        margin-top: 15px;
+        font-size: 17px;
+    }
+
+    .slice_product_img img {
+        width: 700px;
+        height: 500px;
+        display: block;
+        margin: auto;
+        border-radius: 20px;
+        /* box-shadow: 0 0 10px #c60bffdb; */
+        box-shadow: 0px 8px 10px 3px #7b56c26e;
+    }
+    .bharatnft_product_img img {
+        width: 700px;
+        height: 500px;
+        display: block;
+        margin: auto;
+        border-radius: 20px;
+        /* box-shadow: 0 0 10px #c60bffdb; */
+        box-shadow: 0px 8px 10px 3px #9314da36;
+    }
+
+    .slice_product_btn, .bharatnft_product_btn {
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+        padding: 12px 40px;
+        font-weight: 500;
+        font-size: 17px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px 3px #f9fafb36;
+    }
+    .slice_product_btn:hover, .bharatnft_product_btn:hover{
+        background-color: #ef6e10;
+        color: #fff;
+    }
+    .bharatnft_product{
+        margin-top: 100px;
+    }
+</style>
+</head>
+
+<body>
+<div class="product_module_section py-5">
+    <div class="container-fluid">
+        <div class="slice_product">
+            {% for i in module %}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="slice_product_content p-5">
+                        <h2>{{i.title}}</h2>
+                        <p>{{i.description}}
+                        </p>
+                        <div class="slice_view_btn mt-5">
+                            <a href="{{i.get_absolute_url}}" class="slice_product_btn">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="slice_product_img">
+                        <img src="https://www.verdict.co.uk/wp-content/uploads/2018/08/blockchain-escrow-services-1038x778.jpg"
+                            alt="slice_img" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% comment %} <div class="bharatnft_product">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="bharatnft_product_img">
+                        <img src="https://i0.wp.com/technode.com/wp-content/uploads/2020/12/Image-from-iOS-28.jpg?fit=1200%2C675&ssl=1"
+                            alt="bharatnft_img" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="bharatnft_product_content p-5">
+                        <h2>Bharattoken NFT & Store</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis dolores placeat eius
+                            cumque facilis, quo recusandae culpa consequuntur,
+                            alias non explicabo suscipit ipsam nesciunt assumenda quibusdam! Corporis sapiente
+                            ex molestias!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis dolores
+                            placeat eius
+                        </p>
+                        <div class="bharatnft_view_btn mt-5">
+                            <a href="#" class="bharatnft_product_btn">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> {% endcomment %}
+
+    </div>
+</div>    
+</body>
+
+{% endblock productmodule %}

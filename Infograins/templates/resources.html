@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block resourceactivation %}active{% endblock resourceactivation %}
+{% block title %}Infograins |  {{resources.resource_title}}{% endblock title %}
+{% block resource %}
+<!-- single resource page -->
+    <!-- inner page banner start here -->
+    {% if resources %} 
+    <section class="banner_section">
+        <div class="banner_img">
+            <img src="/static/assets/images/inner_banner.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="container">
+            <div class="banner_txt">
+                <h2 class="mb-0">{{resources.resource_title}}</h2>
+            </div>
+        </div>
+    </section>
+    <!-- inner page banner close here -->
+
+    <!-- product page content start here -->
+    <section class="service_categry_page">
+        <div class="container">
+            <div class="srv_categry_content">
+                <p>{{resources.resource_para|safe}}</p>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+   
+{% endblock resource %}

@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@800&display=swap');
+        
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        
+        .test{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        
+        /* ------------------------------------------------------------------------------------------------------------------- */
+        
+        @media (min-width: 576px){
+                .modal-dialog {
+                    max-width: 50%;
+                    margin: 1.75rem auto;
+                }
+        }
+        
+        .modal_contentdiv{
+            /* background-color: blanchedalmond; */
+            background: linear-gradient(50deg, white,#d9b78a);
+            /* background: linear-gradient(50deg, white,#dfc868); */
+            padding: 50px;
+            text-align: center;
+        }
+        
+        .gitex_logodiv{
+            text-align: center;
+        }
+        
+        .gitex_logodiv img{
+            width: 200px;
+            height: auto;
+        }
+        
+        .modal_headtxt{
+            font-weight: 900;
+            font-family: 'Spartan', sans-serif;
+            margin-top: 15px;
+        }
+        
+        .modal_portion .portion-1{
+            font-weight: 600;
+            font-size: 20px;
+            color: crimson;
+            letter-spacing: .8px;
+        }
+        
+        .modal_portion .portion-2{
+            font-weight: bold;
+            font-size: 22px;
+            color: black;
+            margin: 0px 15px;
+        }
+        
+        .modal_portion .portion-3{
+            font-weight: 600;
+            font-size: 20px;
+            letter-spacing: .8px;
+            color: darkblue;
+        }
+        
+        .modal_date{
+            font-size: 25px;
+            font-weight: bold;
+            color: black;
+            margin-top: 20px;
+            font-family: 'Spartan', sans-serif;
+        }
+        
+        .modal_para{
+            font-size: 18px;
+            color: black;
+            letter-spacing: .6px;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+        
+        .modal_btn{
+            padding: 10px 25px;
+            border-radius: 25px;
+            background-color: #00afef;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            outline: none;
+            text-decoration: none;
+        }
+        
+        .modal_btn:hover{
+            color: #fff;
+            opacity: .8;
+        }
+        
+        
+        /* --------------------------------------------- setDate page ----------------------------------------  */
+        
+        .setdate_page{
+            padding: 100px;
+        }
+        
+        .setdate_leftdiv{
+            box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .setdate_subtile{
+            color: grey;
+            font-weight: bold;
+        }
+        
+        .setdate_head{
+            margin-top: 15px;
+            font-family: 'Spartan', sans-serif;
+        }
+        
+        .setdate_clockdiv{
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 0px;
+            color: grey;
+            font-weight: bold;
+        }
+        
+        .setdate_clockdiv .clock{
+            margin-left: 10px;
+        }
+        
+        .setdate_adder{
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 0px;
+            color: grey;
+            font-weight: bold;
+        }
+        
+        .setdate_adder .adder{
+            margin-left: 10px;
+        }
+        
+        .setdate_lftpara{
+            padding: 15px;
+        }
+        
+        
+        /* ---------------- */
+        
+        .setdate_rightdiv{
+            box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+            display: inline-flex;
+        }
+        
+        .sd_rghtdivhead{
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .calender_top{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .calender_nav{
+            width: 50px;
+            display: flex;
+            justify-content: space-between;
+            color: grey;
+            align-items: center;
+        }
+        
+        .date_link{
+            color: rgb(3, 100, 197);
+            font-weight: bold;
+            background-color: transparent;
+            border-radius: 50%;
+            text-decoration: none;
+            position: relative;
+        }
+        
+        .date_link::before{
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -5px;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: rgb(212, 234, 255);
+            z-index: -1;
+            padding: 15px;
+        }
+        
+        .setdate_thead tr th{
+            font-weight: 200;
+            font-size: 12px;
+        }
+        
+        .setdatentime_btn{
+            text-decoration: none;
+            background-color: dodgerblue;
+            border-radius: 25px;
+            padding: 10px 25px;
+            color: #fff;
+            display: flex;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        
+        .setdatentime_btn:hover{
+            color: #fff;
+            opacity: .6;
+        }
+        /* --------------------------------------------------------------------------- */
+        .event_formdiv{
+            box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+        }
+        
+        .event_form_page{
+            padding: 100px;
+        }
+        
+        .eventfrom_leftdiv{
+            width: 40%;
+            padding: 20px;
+        }
+        
+        .event_formsec{
+            width: 60%;
+            padding: 20px;
+        }
+        
+        .eventform_subtile{
+            font-weight: bold;
+            color: grey;
+        }
+        
+        .eventform_head{
+            margin-top: 15px;
+            font-family: 'Spartan', sans-serif;
+        }
+        
+        .eventform_clock{
+            color: grey;
+        }
+        
+        .eventform_showtime{
+            display: flex;
+            color: rgb(10, 216, 171);
+            font-weight: bold;
+        }
+        
+        .set_timedate{
+            margin-left: 10px;
+        }
+        
+        .eventform_zone{
+            color: grey;
+            margin-top: 15px;
+        }
+        
+        .eventform_backbtn{
+            margin-bottom: 15px;
+        }
+        
+        .eventform_backbtn a{
+            color: #0d6efd;
+            text-decoration: underline;
+            background: #e9e8ff;
+            padding: 7px 10px;
+            border-radius: 50%;
+        }
+        
+        .form_head{
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .selectTime{
+            display: none;
+        }
+        
+        .time_div{
+            width: 326px;
+            display: flex;
+            overflow: hidden;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+        
+        .time_show{
+            border: 1px solid dodgerblue;
+            border-radius: 5px;
+            padding: 0px 40px;
+            color: dodgerblue;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            margin-left: 25px;
+            transition: all .3s;
+        }
+        
+        
+        .confirm_btn{
+            background-color: dodgerblue;
+            border-radius: 5px;
+            border: 1px solid dodgerblue;
+            padding: 0px 20px;
+            text-decoration: none;
+            color: #fff;
+            margin-left: 15px;
+            transition: all .3s;
+        }
+        
+        .confirm_btn:hover{
+            color: #fff;
+            opacity: .7;
+        }
+        
+        .select_time{
+            margin-top: 10px;
+            line-height: 3;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height: 351px;
+        }
+        
+        .select_time::-webkit-scrollbar{
+            width: 10px;
+        }
+        
+        .select_time::-webkit-scrollbar-thumb{
+            background-color: grey;
+            border-radius: 25px;
+        }
+        
+        .select_time::-webkit-scrollbar-track{
+            background-color: floralwhite;
+        }
+        
+        
+        .dynamic_date{
+            padding: 20px;
+        }
+        
+        
+        .timezone-selector{
+            width:250px;
+            margin-bottom:5px;
+          }
+        
+          .form-control:focus{
+              box-shadow: none !important;
+          }
+        
+        
+        
+          /* ----------------------------- */
+          input[type=number]::-webkit-inner-spin-button, 
+          input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+             margin: 0; 
+        }
+        </style>
+    <title>Event</title>
+</head>
+
+<body>
+
+    <div class="container event_form_page">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="event_formdiv">
+                    <div class="eventfrom_leftdiv">
+                        <div class="eventform_backbtn"><a href="{% url 'join_event' %}"><i class="fas fa-arrow-left"></i></a>
+                        </div>
+                        <div class="eventform_subtile">CDN Solutions Group</div>
+                        <h2 class="eventform_head">Meet Us At GITEX Dubai 2021</h2>
+                        <div class="eventform_clock">
+                            <span><i class="fas fa-clock"></i></span>
+                            <span>15 min</span>
+                        </div>
+                        <div class="setdate_adder">
+                            <span><i class="fas fa-map-marker-alt"></i></span>
+                            <span class="adder">Hall - Zabeel Hall 4, Stand Number - Z4-31,<br>Dubai World Trade
+                                Centre</span>
+                        </div>
+                        <div class="eventform_showtime">
+                            <span><i class="far fa-calendar"></i></span>
+                            <span class="set_timedate">2:30pm - 2:45pm, Sunday, October 17, 2021</span>
+                        </div>
+                        <div class="eventform_zone">
+                            <span><i class="fas fa-globe-asia"></i></span>
+                            <span>India Standard Time</span>
+                        </div>
+                    </div>
+                    <div class="event_formsec">
+                        <div class="form_head">Enter Details</div>
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Name*</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" required>
+                                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email*</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Please share anything that
+                                    will help prepare for our meeting.</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Send text messages to</label>
+                                <input type="number" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Schedule Event</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

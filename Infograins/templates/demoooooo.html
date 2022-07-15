@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Infograins</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <style>
+        .background h4,
+        .solutions h4 {
+            color: #3a3939;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .background p,
+        .solutions p,
+        .results p {
+            color: #6a7071;
+            font-size: 17px;
+
+            line-height: 30px;
+        }
+
+        .solutions {
+            padding: 50px 0 40px;
+            background: #f6f8fa;
+        }
+
+        .solutions .head,
+        .results .head {
+            color: #3a3939;
+            font-size: 26px;
+
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .solutions .head::after,
+        .results .head::after {
+            content: "";
+            border-bottom: 3px solid #ef6e10;
+            width: 50px;
+            display: block;
+            margin-top: 4px;
+            margin-left: 48%;
+        }
+        .result_content{
+            background-color: #ebebebb3;
+            padding: 40px;
+        }
+        .result_content .details h1{
+            text-transform: uppercase;
+    color: #083476;
+    margin-bottom: 0px;
+        }
+        .strategy {
+            background-color: #070b3b;
+            padding: 30px 30px 25px;
+            width: 100%;
+            z-index: 2;
+            color: #fff;
+        }
+
+        .strategy h3 {
+            font-size: 42px;
+            line-height: 41px;
+            margin-top: 10px;
+            margin-bottom: 13px;
+            text-align: center;
+        }
+
+        .strategy .strategy_border {
+            background-color: #fff;
+            height: 1px;
+            margin: auto;
+            width: 67px;
+        }
+
+        .strategy h4 {
+            color: #fff;
+            font-size: 17px;
+            letter-spacing: 2px;
+            line-height: 47px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .strategy p {
+            font-size: 16px;
+            line-height: 24px;
+            margin: 16px auto 48px;
+            max-width: 100%;
+            width: 932px;
+            text-align: center;
+        }
+
+        .strategy ul {
+            width: 736px;
+            margin: auto;
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .strategy ul li figcaption {
+            font-size: 21px;
+
+            color: #fff;
+            line-height: 1.43;
+            text-align: center;
+        }
+
+        .strategy ul li figure {
+            background-color: #0a0f4f;
+            border-radius: 100%;
+            height: 165px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 45px;
+            width: 165px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 14px;
+        }
+       
+
+        .testimonials .msg p {
+            color: #162a33;
+            font-family: "Open Sans";
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.826;
+            margin: auto;
+            text-align: center;
+            
+        }
+
+        .testimonials .name h5 {
+            color: #303030;
+            text-align: center;
+            margin-top: 10px;
+        }
+        @media screen and (max-width:767px){
+            .strategy ul {
+            width: auto;
+            margin: auto;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        }
+        .top_image{
+            position: relative;
+            color: #fff;
+        }
+        .top_image .content{
+            position: absolute;
+            top: 30%;
+            left: 60%;
+        }
+        .top_image h3{
+            padding: 10px 0px;
+        }
+        .top_image .icon{
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caseStudy_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="top_image">
+                        <img src="https://infograins.com/static/assets/images/img1.png" alt="top_img" class="img-fluid d-block m-auto">
+                        <div class="content">
+                            <h3><img src="https://infograins.com/static/assets/images/Ellipse%201.png" alt="" class="icon img-fluid"> <span>Buy and Send Crypto</span> </h3>
+                            <h3><img src="https://infograins.com/static/assets/images/Ellipse%202.png" alt="" class="icon img-fluid"> <span>Swap Crypto</span> </h3>
+                            <h3><img src="https://infograins.com/static/assets/images/Ellipse%203.png" alt="" class="icon img-fluid"> <span>Multichain Wallet</span> </h3>
+                            <h3><img src="https://infograins.com/static/assets/images/Ellipse%204.png" alt="" class="icon img-fluid"> <span>Store NFT</span> </h3>
+                            
+                        </div>
+                    </div>
+
+                    <div class="background mt-3">
+                        <div class="product_about">
+                            <div class="head">About us</div>
+                            <div class="intro">Infograins, a top blockchain development firm with headquarters in Indore, creates and provides custom digital solutions to businesses and startups all over the world. 100+ digital solutions have been created by our team of more than 250 full-stack engineers, blockchain developers, designers, and innovators. We assist businesses in launching next-generation apps by utilising cutting-edge technologies like Web 3.0, blockchain, and cloud.</div>
+                        </div>
+                        <div class="img_div">
+                            <img src="https://infograins.com/static/assets/images/phone2.png" alt="img"
+                                class="img-fluid d-block m-auto">
+                        </div>
+
+                        <div class="row px-5 my-5">
+                            <div class="col-md-6">
+                                <h4>background</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti minima facilis
+                                    ipsum vel voluptatum iusto, praesentium maiores iure dolorum ut quas numquam facere
+                                    voluptates natus dignissimos. Illo voluptas id facere?</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>challenges</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti minima facilis
+                                    ipsum vel voluptatum iusto, praesentium maiores iure dolorum ut quas numquam facere
+                                    voluptates natus dignissimos. Illo voluptas id facere?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="strategy">
+            <div class="container">
+                <div class="row">
+                    <ddv class="col-md-12">
+                        <h3>Our Strategy</h3>
+                        <div class="strategy_border"></div>
+                        <h4>RESEARCH & PLANNING</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea aliquam amet omnis iure
+                            asperiores quasi,
+                            quisquam qui dolore obcaecati ex eius dolorum labore, tempore delectus sint? Dignissimos
+                            harum ad eum?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea aliquam amet omnis iure
+                            asperiores quasi
+                        </p>
+                        <ul>
+                            <li>
+                                <figcaption>DESIGN</figcaption>
+                                <figure><img
+                                        src="https://www.suffescom.com/assets/img/new_suffes_images/lending-page-design.svg" width="70px">
+                                </figure>
+                            </li>
+                            <li>
+                                <figcaption>UX</figcaption>
+                                <figure><img
+                                        src="https://www.suffescom.com/assets/img/new_suffes_images/lending-page-ux.svg" width="70px">
+                                </figure>
+                            </li>
+                            <li>
+                                <figcaption>DEVELOPMENT</figcaption>
+                                <figure><img
+                                        src="https://www.suffescom.com/assets/img/new_suffes_images/lending-page-development.svg" width="80px">
+                                </figure>
+                            </li>
+                        </ul>
+                    </ddv>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="solutions">
+            <div class="container">
+                <div class="head">THE SOLUTION</div>
+                <div class="row px-5">
+                    <div class="col-md-6">
+                        <h4>Distinctive Blockchain Features</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti minima facilis ipsum vel
+                            voluptatum iusto, praesentium maiores iure dolorum ut quas numquam facere voluptates natus
+                            dignissimos. Illo voluptas id facere?</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Traceability Monitoring System</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti minima facilis ipsum vel
+                            voluptatum iusto, praesentium maiores iure dolorum ut quas numquam facere voluptates natus
+                            dignissimos. Illo voluptas id facere?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="results my-5">
+            <div class="container">
+                <div class="head">THE RESULT</div>
+                <div class="row px-5">
+                    <div class="col-md-6">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti minima facilis ipsum vel
+                            voluptatum iusto, praesentium maiores iure dolorum ut quas numquam facere voluptates natus
+                            dignissimos. Illo voluptas id facere?</p>
+                    </div>
+                    <div class="col-md-6">
+
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti minima facilis ipsum vel
+                            voluptatum iusto, praesentium maiores iure dolorum ut quas numquam facere voluptates natus
+                            dignissimos. Illo voluptas id facere?</p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-10 offset-md-1">
+                        <div class="result_content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="details">
+                                        <h1>product name</h1>
+                                        <h5>lorem ipsum dollar sit amet</h5>
+                                        <p class="mt-4" style="color: #000;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptatibus veniam perferendis doloribus quaerat, iure itaque aperiam temporibus ut error laboriosam ex minus iste perspiciatis! Reprehenderit similique obcaecati perferendis asperiores!
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptatibus veniam perferendis doloribus quaerat,
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="result_img">
+                                        <img src="https://www.enationworldwide.com/wp-content/uploads/2015/08/icon_mobile_apps.png" alt="img" class="img-fluid d-block m-auto">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonials mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="msg">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio officiis sed quia,
+                                cupiditate architecto obcaecati blanditiis qui consequatur laboriosam nulla
+                                exercitationem sit porro accusamus aliquam saepe. Veniam autem voluptas velit?</p>
+                        </div>
+                        <div class="name">
+                            <h5>Demo name</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

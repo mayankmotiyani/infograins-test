@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block resourceactivation %}active{% endblock resourceactivation %}
+{% block title %}Infograins |  Resources{% endblock title %}
+{% block resource %}
+
+    <!-- inner page banner start here -->
+    <section class="banner_section">
+        <div class="banner_img">
+            <img src="/static/assets/images/inner_banner.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="container">
+            <div class="banner_txt">
+                <h2 class="mb-0">Resources</h2>
+            </div>
+        </div>
+    </section>
+    <!-- inner page banner close here -->
+
+    <section class="resource_section">
+        <div class="container">
+            <div class="row">
+                {% for i in resourcesnav %}
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <div class="resourse_link">
+                        <a href="{% url 'resources' %}{{i.resource_slug}}" class="resourse_link">
+                            <img src="/media/{{i.resource_img}}" alt="" class="img-fluid">
+                            <b>{{i.resource_title}}</b>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+{% endblock resource %}

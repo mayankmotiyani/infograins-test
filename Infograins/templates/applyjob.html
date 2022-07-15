@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% block job %}
+
+<style>
+  .career_modal{
+    margin: 50px auto;
+  }
+  .applyForJob{
+    border: none;
+    background-color: #f96900;
+    border-radius: 2px;
+  }
+</style>
+
+<section class="career_modal">
+   
+     <div class="container">
+       <div class="row justify-content-center">
+         <div class="col-lg-8 cont_detail">
+
+           <h2 class="text-center">Apply For Job</h2>
+    
+           <form action="" method="POST" enctype="multipart/form-data"> 
+             <div class="row g-3 about-author p-4">
+               <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                 <div class="form-group">
+                   {% csrf_token %}
+                   <label for="frstname">First Name</label>
+                   <input type="text" class="form-control" id="firstname" name='firstname' required>
+                   
+                   
+                 </div>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                 <div class="form-group">
+                   <label for="lastname">Last Name</label>
+                   <input type="text" class="form-control" id="lastname" name='lastname' >
+
+                   
+                 </div>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                 <div class="form-group">
+                   <label for="email">Email Id</label>
+                   <input type="email" class="form-control" id="email" name='email' required>
+                 
+                </p>
+                   
+                 </div>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                 <div class="form-group">
+                   <label for="number">Phone Number</label>
+                   <input type="number" class="form-control" id="contact" name='contact' required>
+                 
+                </p>
+                   
+                 </div>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                 <div class="form-group">
+                   <label for="address">Address</label>
+                   <input type="text" class="form-control" id="address" name='address' >
+                   
+                 </div>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                 <div class="form-group">
+                   <label for="position ">Position applying for</label>
+                   <input type="text" class="form-control" id="position" name='position' >
+                   
+                 </div>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                 <div class="form-group">
+                   <label for="skills">skills </label>
+                   <input type="text" class="form-control" id="skills" name='skills' required>
+                   
+                 </div>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                 <div class="form-group">
+                   <label for="experience">experience </label>
+                   <input type="text" class="form-control" id="experience" name='experience' required>
+                   
+                 </div>
+               </div>
+             
+               <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                 <label for="inputSource" class="form-label">Reference</label>
+                 <select id="Source1" class="form-control" name="source" required>
+                     <option selected>Select</option>
+                     <option>Facebook</option>
+                     <option>Instagram</option>
+                     <option>Linkedin</option>
+                     <option>Others</option>
+                 </select>
+             </div>
+    
+             <div class="md-form d-none" id="forOther">
+                 <textarea id="specify" class="md-textarea form-control" name="specify" rows="3"></textarea>
+             </div>
+    
+    
+             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+               <label for="resume" class="form-label">Resume</label>
+               <input type="file" accept="application/pdf, application/vnd.ms-excel" name="resume" id="resume" required> 
+               
+           </div>
+
+           <div id="click" class="modal-footer col-lg-12">
+             <button id="success_popupClick2" class="applyForJob btn btn-primary my-4 w-100 text-white"
+                data-bs-dismiss="modal" data-bs-toggle="modal"
+                data-bs-target="#successful_message" type="submit">Submit</button>
+           </div>
+          
+        </form>
+    
+              
+           
+       </div>
+     </div>
+    </div>
+         </div>
+       </div>
+     </div>
+  </section> 
+
+ 
+
+  {% endblock job %}
