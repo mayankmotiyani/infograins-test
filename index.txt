@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 master 
 mayank
-=======
 master
-sudhanshu
 sitole
->>>>>>> 8fe702495e824c2c3e2cf440784fa342d1a8768e
